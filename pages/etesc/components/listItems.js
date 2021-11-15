@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import { prefix } from '../../../utils/prefix.js'
-import { statePiso } from '../../../public/etesc/data'
+import { statePiso } from '../../../public/data/etesc'
 
-const upFile = `${prefix}/etesc/up-file.png`
-const reto = `${prefix}/etesc/reto.png`
+const upFile = `${prefix}/imgs/etesc/up-file.png`
+const reto = `${prefix}/imgs/etesc/reto.png`
 
 const SrcList = styled.div`
 	display: flex;

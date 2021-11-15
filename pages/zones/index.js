@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import QV from '../../UIcomponents/qv';
 import Header from '../../UIcomponents/header'
 import Card from '../../UIcomponents/zcCard'
-import { getDataZones } from '../../public/zones/data'
+import { getZones } from '../../public/data/zones'
 
 const imgZones = `${prefix}/imgs/header/zones.png`
 
@@ -18,7 +18,7 @@ const Grid = styled.div`
 `
 
 const Zones = () => {
-	const datazones = getDataZones()
+	const datazones = getZones()
 	return <QV>
 		<Header
 			title="Zonas Comunes"

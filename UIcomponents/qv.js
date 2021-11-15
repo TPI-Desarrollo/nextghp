@@ -45,7 +45,7 @@ const Right = styled.div`
 `
 const Content = styled.div`
 	grid-area: ct;
-	padding: 0 37px 150px 20px;
+	padding: 0 47px 150px 30px;
 	position: absolute;
 	top: 0;
 	bottom: 0;

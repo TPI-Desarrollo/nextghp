@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { prefix } from '../../utils/prefix.js';
-import { getData, getPisoTitle } from '../../public/etesc/data'
+import { getData, getPisoTitle } from '../../public/data/etesc'
 import styled from 'styled-components'
 
 import QV from '../../UIcomponents/qv';

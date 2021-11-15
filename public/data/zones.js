@@ -29,5 +29,5 @@ const datazones = [
 	},
 ]
 
-export const getDataZones = () => datazones
+export const getZones = () => datazones
 
