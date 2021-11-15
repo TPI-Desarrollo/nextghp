@@ -19,7 +19,7 @@ const Button = styled.div`
 		color: #ffffff;
 	}
 	@media screen and (max-width: 800px) {
-		height: 50%; 
+		height: 100%; 
 		width: 100%;
 	}
 `
@@ -29,8 +29,8 @@ const Icon = styled.img`
 	height: 0%;
 	width: 0%;
 	@media screen and (max-width: 800px) {
-		height: 1.5em; 
-		width: 80%;
+		height: 1.6em; 
+		width:  1.6em;
 	}
 `
 const Container = styled.nav`
@@ -43,9 +43,11 @@ const Container = styled.nav`
 	color: #999;
 	box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.4);
 	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	@media screen and (max-width: 800px) {
-		height: 70px; 
+		height: 60px; 
 	}
 `
 

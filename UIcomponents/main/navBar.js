@@ -66,8 +66,8 @@ const Container = styled.nav`
 	}
 `
 
-const logo = `${prefix}/main/img/QB_blanco_vertical_1.png`
-const navImg = `${prefix}/main/img/QV_textura.png`
+const logo = `${prefix}/imgs/main/QB_blanco_vertical_1.png`
+const navImg = `${prefix}/imgs/main/QV_textura.png`
 
 const NavCont = () => {
 	const pages = getPages()

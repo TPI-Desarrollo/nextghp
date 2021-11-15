@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Jumbo = styled.div`
-	margin: 30px 0;
+	margin: 60px 0 30px 0;
 	border-radius: 20px;
 	background-color: ${props => props.primary ? '#1920EF':'#FFC024'};
 	position: relative;
@@ -22,8 +22,9 @@ const Title = styled.h1`
 	}
 `
 const Desc = styled.h4`
-	font-weight: 600;
-	font-size: ${props => props.primary ? '1.4em':'1.1em'};
+	font-weight: ${props => props.primary ? 'bold': null};
+
+	font-size: ${props => props.primary ? '1.4em':'1em'};
 	margin: 0px;
 	width: 50%;
 	color: ${props => props.primary ? '#FFC024':'#000'};
@@ -35,7 +36,7 @@ const Desc = styled.h4`
 `
 const Img = styled.img`
 	position: absolute;
-	width: ${props => props.primary ? '25%':'40%'};
+	width: ${props => props.primary ? '28%':'38%'};
 	bottom: ${props => props.primary ? '-15%':'0'};
 	right: ${props => props.primary ? '10%':'0'};
 	z-index: 1;

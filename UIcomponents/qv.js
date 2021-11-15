@@ -52,8 +52,9 @@ const Content = styled.div`
 	left: 0;
 	right: -17px; 	
 	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
 `
-// right -17px
 
 const QV = ({ children }) => {
   return (
