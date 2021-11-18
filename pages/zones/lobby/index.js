@@ -38,7 +38,7 @@ const Lobby = () => {
 
 	useEffect(() => {
 		setData(getLobbyData(group, piso))
-	}, [])
+	}, [group, piso])
 
 	return <QV>
 		<Title>Lobby</Title>
