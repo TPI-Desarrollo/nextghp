@@ -1,4 +1,5 @@
 import { prefix } from '../../utils/prefix.js';
+import lobbydata from './zonesCont/lobby.json'
 
 const datazones = [
 	{
@@ -11,13 +12,13 @@ const datazones = [
 		name: 'REUNIONES',
 		desc: 'Webinars para todos',
 		img: `${prefix}/imgs/zones/reun.png`,
-		link: '/zones/asesor',
+		link: '/zones/webinar',
 	},
 	{
 		name: 'LOBBY',
 		desc: 'Tus tareas inician aqui',
 		img: `${prefix}/imgs/zones/lobby.png`,
-		link: '/zones/asesor',
+		link: '/zones/lobby',
 		type: 'twover'
 	},
 	{
@@ -30,4 +31,6 @@ const datazones = [
 ]
 
 export const getZones = () => datazones
+export const getLobbyData = (grp, piso) => lobbydata[grp][piso]
+
 
