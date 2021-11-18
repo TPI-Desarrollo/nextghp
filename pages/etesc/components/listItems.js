@@ -58,8 +58,9 @@ const ItemList = ({ title, data, imgSrc }) => {
 const PisoNo = () => 
 			<h3>El piso seleccionado estara disponible una vez se complete la fase del piso anterior</h3>
 
-const ListItems = ({group, piso, data}) => {
+const Resources = ({group, piso, data}) => {
 	const pisoA = statePiso()
+
 	return (
 		<div>
 		{piso <= pisoA 
@@ -83,4 +84,4 @@ const ListItems = ({group, piso, data}) => {
 	);
 }
 
-export default ListItems;
+export default Resources
