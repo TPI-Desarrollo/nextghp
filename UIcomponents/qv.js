@@ -9,6 +9,7 @@ const Container = styled.div`
   width: 100%;
 	height: 100vh;
 	display: grid;
+	transition: 0.3s ease;
 	grid-template-columns: 1fr 4fr 1.3fr;
 	grid-template-rows: auto;
 	grid-template-areas: 

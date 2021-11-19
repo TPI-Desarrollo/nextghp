@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 const Jumbo = styled.div`
-	margin: 60px 0 30px 0;
+	margin: 90px 0 30px 0;
 	border-radius: 20px;
 	background-color: ${props => props.primary ? '#1920EF':'#FFC024'};
 	position: relative;
-	padding: 70px 10px 20px 20px;
+	padding: 40px 10px 20px 20px;
 	@media screen and (max-width: 1000px) {
+		margin: 10px 0 30px 0;
 		padding: 15px;
 	}
 `

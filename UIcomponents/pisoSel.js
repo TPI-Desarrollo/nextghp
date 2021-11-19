@@ -7,7 +7,7 @@ const Selector = styled.div`
 	text-align: center;
 	justify-content: space-evenly;
 	padding: 5px 5%;
-	margin: 20px 5%;
+	margin: 20px 0;
 	background-color: #e0e5ed;
 	border-radius: 20px;
 	color: #1920EF;
@@ -27,7 +27,7 @@ const SelItem = styled.div`
   color: ${props => props.primary ? '#fff' : null};
 
 	:hover {
-		transform: scale(1.03);
+		transform: scale(1.2);
 		background-color: #979FF5;
 		color: #ffffff;
 		cursor: pointer;

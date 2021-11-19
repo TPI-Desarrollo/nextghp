@@ -1,10 +1,13 @@
 import styled from 'styled-components'
 import { prefix } from '../../../utils/prefix.js'
-import { statePiso } from '../../../public/data/etesc'
+import { statePiso } from '../../../public/data'
 
 const upFile = `${prefix}/imgs/etesc/up-file.png`
 const reto = `${prefix}/imgs/etesc/reto.png`
 
+const Container = styled.div`
+	padding: 10px 20px;
+`
 const SrcList = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -62,7 +65,7 @@ const Resources = ({group, piso, data}) => {
 	const pisoA = statePiso()
 
 	return (
-		<div>
+		<Container>
 		{piso <= pisoA 
 			? <div>
 					{data.entrega[0] ? 
@@ -80,7 +83,7 @@ const Resources = ({group, piso, data}) => {
 				</div>
 			: <PisoNo/>
 			}
-		</div>
+		</Container>
 	);
 }
 

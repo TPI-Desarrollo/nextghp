@@ -1,4 +1,5 @@
-import { prefix } from '../../../utils/prefix.js';
+import { prefix } from '../utils/prefix.js';
+import Link from 'next/link'
 import styled from 'styled-components';
 
 const SrcGrid = styled.div`
@@ -6,12 +7,12 @@ const SrcGrid = styled.div`
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	grid-auto-rows: auto;
 	grid-gap: 20px 40px;
+	transition: 0.3s ease;
 `
 const SrcList = styled.div`
 	display: flex;
 	flex-direction: column;
 	color: blue;
-	margin-bottom: 30px;
 `
 const Src = styled.div`
 	display: flex;
@@ -37,7 +38,7 @@ const Title = styled.div`
 
 const Item = ({data, src}) => {
 	return(
-		<a href={data[0]} target="_blank" without rel="noreferrer">
+		<a href={data[1]} target="_blank" withoutrel="noreferrer">
 			<Src>
 				<Img src={`${prefix}/imgs/items/${src}.png`}/>
 				<Title>{data[0]}</Title>
@@ -45,7 +46,7 @@ const Item = ({data, src}) => {
 		</a>
 	)
 }
-const ItemList = ({ data }) => {
+const SrcItemList = ({ data }) => {
 	const sources = []
 	for (let prop in data){
 		sources.push({ name: prop, cont: data[prop] })
@@ -55,15 +56,15 @@ const ItemList = ({ data }) => {
 		{sources.map(src => src.cont[0] ?
 			<SrcList key={src.name}>
 				<h4>_{src.name}</h4>
-				{ src.cont.map(cont => 
+				{src.cont.map(i => 
 					<Item 
-						key={cont[0]}
-						data={cont} 
+						key={i[0]}
+						data={i} 
 						src={src.name}
 					/>)}
 			</SrcList>
-		: null )}
+			: null )}
 		</SrcGrid>
 	)
 }
-export default ItemList
+export default SrcItemList

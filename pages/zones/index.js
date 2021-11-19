@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import QV from '../../UIcomponents/qv';
 import Header from '../../UIcomponents/header'
 import Card from '../../UIcomponents/zcCard'
-import { getZones } from '../../public/data/zones'
+import { getZones } from '../../public/data'
 
 const imgZones = `${prefix}/imgs/header/zones.png`
 

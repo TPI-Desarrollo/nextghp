@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Link from 'next/link'
+import { prefix } from '../utils/prefix.js';
 
 const ZElement = styled.div`
 	display: flex;
@@ -54,7 +55,7 @@ const Element = ({ item }) => {
 	return (
 		<Link href={item.link}>
 			<ZElement type={item.type}>
-				<Img src={item.img} name={item.name}/>
+				<Img src={`${prefix}${item.img}`} name={item.name}/>
 				<Text>
 					<Title>{item.name}</Title>
 					<Desc>{item.desc}</Desc>
