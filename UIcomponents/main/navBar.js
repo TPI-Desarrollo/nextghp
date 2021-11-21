@@ -34,9 +34,6 @@ const Icon = styled.img`
 	position: relative;
 	display:inline-block
 	height: 80%;
-	@media screen and (max-width: 800px) {
-		width: 0%
-	}
 `
 const Text = styled.span`
 	display:inline-block;
@@ -44,9 +41,6 @@ const Text = styled.span`
 	padding: 0px;
 	width: 65%;
 	font-size: .8rem;
-	@media screen and (max-width: 800px) {
-		font-size: 0rem;
-	}
 `
 const Container = styled.nav`
 	grid-area: sb;
@@ -61,8 +55,7 @@ const Container = styled.nav`
 	box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.4);
 
 	@media screen and (max-width: 800px) {
-		position: absolute;
-		width: 0%;
+		display: none; 
 	}
 `
 

@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react'
-import { prefix } from '../../../utils/prefix.js';
+import { prefix } from '../../../../utils/prefix.js';
 
 import styled from 'styled-components';
-import PisosSel from '../../../UIcomponents/pisoSel'
-import GroupSel from '../../../UIcomponents/groupSel'
-import ItemList from '../../../UIcomponents/SrcItemList'
+import PisosSel from '../../../../UIcomponents/pisoSel'
+import GroupSel from '../../../../UIcomponents/groupSel'
+import ItemList from '../../../../UIcomponents/SrcItemList'
 
-import { statePiso, getAsesorSrc } from '../../../public/data'
+import { statePiso, getAsesorSrc } from '../../../../public/data'
 
 
 const Cont = styled.div`
 	padding: 0px 20px;
+	display: ${p => p.active ? 'block' : 'none'};
+	transition: .3s ease;
 `
 
-const Srcs = () => {
+const Srcs = ({active}) => {
 	const [piso, setPiso] = useState(1)
 	const [group, setGroup] = useState("dos")
 	const [data, setData] = useState({})
@@ -23,7 +25,7 @@ const Srcs = () => {
 		setData(getAsesorSrc(group, piso))
 	}, [group, piso])
 
-	return <Cont>
+	return <Cont active={active}>
 		<GroupSel group={group} setGroup={setGroup}/>
 		<PisosSel piso={piso} pisoF={setPiso}/>
 			{piso <= pisoA

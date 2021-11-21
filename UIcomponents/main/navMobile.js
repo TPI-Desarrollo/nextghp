@@ -9,8 +9,8 @@ const Button = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 2vh 0px;
-	width: 0%;
-	height: 0%; 
+	height: 100%; 
+	width: 100%;
 	transition: 0.5s;
 
 	:hover {
@@ -18,36 +18,28 @@ const Button = styled.div`
 		background-color: #55F;
 		color: #ffffff;
 	}
-	@media screen and (max-width: 800px) {
-		height: 100%; 
-		width: 100%;
-	}
 `
 const Icon = styled.img`
 	position: relative;
 	display:inline-block
-	height: 0%;
-	width: 0%;
-	@media screen and (max-width: 800px) {
-		height: 1.6em; 
-		width:  1.6em;
-	}
+	height: 1.6em; 
+	width:  1.6em;
 `
 const Container = styled.nav`
+	display: none;
 	position: fixed;
 	background-color: #1920EF;
 	left: 0;
 	bottom: 0;
-	height: 0px; 
+	height: 60px; 
 	width: 100%;
 	color: #999;
 	box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.4);
-	display: flex;
 	justify-content: center;
 	align-items: center;
 
 	@media screen and (max-width: 800px) {
-		height: 60px; 
+		display: flex;
 	}
 `
 

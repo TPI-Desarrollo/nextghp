@@ -12,7 +12,7 @@ const Selector = styled.div`
 	border-radius: 20px;
 	color: #1920EF;
 	font-weight: bold;
-	font-size: .8em;
+	font-size: 1em;
 	@media screen and (max-width: 1000px) {
 		padding: 5px 15%;
 	}
