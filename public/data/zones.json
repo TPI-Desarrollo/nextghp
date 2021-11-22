@@ -22,7 +22,7 @@
 		"name": "ASESORES",
 		"desc": "Resuelve tus dudas",
 		"img": "/imgs/zones/asesor.png",
-		"link": "/zones/asesor/src",
+		"link": "/zones/src/asesor",
 		"type": "twohor"
 	}
 ]

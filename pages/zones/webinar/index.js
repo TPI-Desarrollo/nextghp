@@ -5,7 +5,7 @@ import QV from '../../../UIcomponents/qv';
 
 
 const Webi = () => {
-	return <QV>
+	return <QV pg="Zonas Comunes">
 		Webinars
 	</QV>
 }

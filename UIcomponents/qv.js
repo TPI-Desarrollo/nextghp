@@ -57,15 +57,15 @@ const Content = styled.div`
 	flex-direction: column;
 `
 
-const QV = ({ children }) => {
+const QV = ({ children, pg }) => {
   return (
 		<Container>
 			<Content>
 				{children}
 			</Content>
 			<Right/>
-			<NavCont/>
-			<NavMob/>
+			<NavCont pg={pg}/>
+			<NavMob pg={pg}/>
 		</Container>
   );
 }

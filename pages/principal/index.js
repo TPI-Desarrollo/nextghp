@@ -13,7 +13,7 @@ const Title = styled.h3`
 `
 
 const Login = () => {
-  return <QV>
+  return <QV pg="Principal">
 		<Header
 			title="Quanticon Valley"
 			desc="Bienvenidos/as"

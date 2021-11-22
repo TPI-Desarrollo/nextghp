@@ -11,17 +11,17 @@ import Faqs from './faqs';
 const types = [
 	{
 		title: 'CONTENIDO ETESC',
-		link: '/zones/asesor/src',
+		link: '/zones/src/asesor',
 		type: 'src'
 	},
 	{
 		title: 'ASESORES VIRTUALES',
-		link: '/zones/asesor/vir',
+		link: '/zones/vir/asesor',
 		type: 'vir'
 	},
 	{
 		title: 'PREGUNTAS FRECUENTES',
-		link: '/zones/asesor/faq',
+		link: '/zones/faq/asesor',
 		type: 'faq'
 	},
 ]
@@ -65,7 +65,7 @@ const Asesor = () => {
   const router = useRouter()
   const type = router.query.type
 
-	return <QV>
+	return <QV pg="Zonas Comunes">
 		<ZoneHeader	zone={3}/>
 		<Selector type={type}/>
 		<Srcs active={type === 'src'}/>

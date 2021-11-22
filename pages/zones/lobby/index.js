@@ -34,7 +34,7 @@ const Lobby = () => {
 		setData(getLobbyData(group, piso))
 	}, [group, piso])
 
-	return <QV>
+	return <QV pg="Zonas Comunes">
 		<ZoneHeader	zone={2}/>
 		<GroupSel group={group} setGroup={setGroup}/>
 		<PisosSel piso={piso} pisoF={setPiso}/>

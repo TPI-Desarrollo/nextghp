@@ -20,5 +20,5 @@ export const getLobbyData = (grp, piso) => lobbydata[grp][piso]
 
 // ASESOR
 export const getAsesorSrc = (grp, piso) => asesordata.src[grp][piso]
-export const getAsesorVir = () => asesordata.asesores
+export const getAsesorVir = () => asesordata.virtual
 export const getAsesorFaq = () => asesordata.faqs

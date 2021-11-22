@@ -31,7 +31,7 @@ const office = [
 ]
 
 const Office = () => {
-	return <QV>
+	return <QV pg="Oficina">
 		<Header
 			title="Oficinas"
 			desc="Perfil y progreso de los equipos"

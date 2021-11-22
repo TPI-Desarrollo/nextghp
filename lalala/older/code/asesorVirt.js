@@ -135,30 +135,30 @@ const AsesorVir = () => {
     <div>
 	{asesor === '2' ?
       <div>
-        <p>Asesores Virtuales</p>
-        {asesores.map((asesor, i) => {
-          return  <div className="asesor-card">
-                    <div>
-                      <img className="asesor-img" src={"./imgs/profs/" + asesor.img}/>
-                    </div>
-                    <div>
-                      <h4 className="no-margin">{asesor.nombre}</h4>
-                      <h5 className="no-margin">{asesor.rol}</h5>
-                      <p className="asesor-txt no-margin">
-                        {asesor.desc.substr(0, 295) + "..."}
-                      </p>
-                    </div>
-                    <div className="asesor-coins-div">
-                      <span className="asesor-campo">{asesor.campo}</span>
-                      <p className="asesor-costo-label">Costo Asesoria</p>
-                      <div className="asesor-coins">
-                        <img src="./imgs/QV_Innocoins 1.png"/>
-                        {asesor.costo}
-                      </div>
-                      <button data-toggle="modal" data-target="#myModalAsesores" style={{fontSize:'16px'}} 
-                      className="grupo-sel grp-selected" onClick={(e) => {changeMon(e, i)}}>Mas Informacion</button>
-                    </div>
-                  </div>
+      <p>Asesores Virtuales</p>
+{asesores.map((asesor, i) => {
+return  <div className="asesor-card">
+          <div>
+            <img className="asesor-img" src={"./imgs/profs/" + asesor.img}/>
+          </div>
+          <div>
+            <h4 className="no-margin">{asesor.nombre}</h4>
+            <h5 className="no-margin">{asesor.rol}</h5>
+            <p className="asesor-txt no-margin">
+              {asesor.desc.substr(0, 295) + "..."}
+            </p>
+          </div>
+          <div className="asesor-coins-div">
+            <span className="asesor-campo">{asesor.campo}</span>
+            <p className="asesor-costo-label">Costo Asesoria</p>
+            <div className="asesor-coins">
+              <img src="./imgs/QV_Innocoins 1.png"/>
+              {asesor.costo}
+            </div>
+            <button data-toggle="modal" data-target="#myModalAsesores" style={{fontSize:'16px'}} 
+            className="grupo-sel grp-selected" onClick={(e) => {changeMon(e, i)}}>Mas Informacion</button>
+          </div>
+        </div>
         })}
         <Modal/>               
       </div>

@@ -19,7 +19,7 @@ const Grid = styled.div`
 
 const Zones = () => {
 	const datazones = getZones()
-	return <QV>
+	return <QV pg="Zonas Comunes">
 		<Header
 			title="Zonas Comunes"
 			desc="¡Espacios para todos!"

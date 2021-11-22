@@ -13,7 +13,7 @@ const Cont = styled.div`
 
 
 const Info = () => {
-	return <QV>
+	return <QV pg="Informacion">
 		<Header
 			title="Informacion"
 			desc="Acerca del juego"

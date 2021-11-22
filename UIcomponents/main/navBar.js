@@ -12,19 +12,26 @@ const NavImg = styled.img`
 	width: 100%;
 	bottom: 0;
 	left: 0;
+	@media screen and (max-height: 700px) {
+		display: none; 
+	}
 `
 const Button = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	padding: 2vh 0px;
-	border-radius: 4px;
+	border-radius: 0 10px 10px 0;
 	font-weight: bold;
 	width: 100%;
 	transition: 0.5s;
 
+	background-color: ${p => p.active ? '#303CFE' : null};
+	color: ${p => p.active ? '#fff' : null};
+	border-left: solid ${p => p.active ? '5px' : '0'} #FFC024;
+	transform: ${p => p.active ? 'scale(1.02)' : null};
+
 	:hover {
-		transform: scale(1.03);
 		background-color: #303CFE;
 		color: #ffffff;
 	}
@@ -40,7 +47,7 @@ const Text = styled.span`
 	margin: 0px;
 	padding: 0px;
 	width: 65%;
-	font-size: .8rem;
+	font-size: 1rem;
 `
 const Container = styled.nav`
 	grid-area: sb;
@@ -62,7 +69,7 @@ const Container = styled.nav`
 const logo = `${prefix}/imgs/main/QB_blanco_vertical_1.png`
 const navImg = `${prefix}/imgs/main/QV_textura.png`
 
-const NavCont = () => {
+const NavCont = ({pg}) => {
 	const pages = getPages()
 	return (
 		<Container>
@@ -71,7 +78,7 @@ const NavCont = () => {
 			{pages.map((item) => {
 				return(
 					<Link href={item.link} key={item.link}>
-						<Button>
+						<Button active={item.title === pg}>
 							<Icon src={item.src} alt={item.link}/>
 							<Text>{item.title}</Text>
 						</Button>

@@ -26,7 +26,7 @@ const Etesc = () => {
 	const [group, setGroup] = useState('dos')
 	const data = getEtesc(group, piso)
 	const pisoTitle = getPisoTitle(piso)
-	return <QV>
+	return <QV pg="ETESC">
 		<Header
 			title="ETESC"
 			desc="Edificio Tecnológico de Empredimiento Sostenible"
