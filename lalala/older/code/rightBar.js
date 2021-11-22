@@ -1,6 +1,6 @@
 const container = document.querySelector('.right_bar_container');
 
-var selected = 4;
+var selected = 6;
 function changeNoti(e, num){
     e.preventDefault();
     var vid = document.querySelector('#vid');
@@ -54,7 +54,17 @@ const videos = [
 		no: 4,
 		fecha: "05-Noviembre 2021",
 		video: "https://www.youtube.com/embed/s1dIgi50Wic"
-	}
+	},
+	{
+		no: 5,
+		fecha: "12-Noviembre 2021",
+		video: "https://www.youtube.com/embed/cgKLuTxNsVE"
+	},
+	{
+		no: 6,
+		fecha: "19-Noviembre 2021",
+		video: "https://www.youtube.com/embed/Mtz92lwd9Gs"
+	},
 ]
 
 

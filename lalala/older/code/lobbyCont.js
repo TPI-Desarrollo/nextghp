@@ -29,10 +29,14 @@ const data = {
 			tool: [],
 		},
 		3 : {
-			ova: [],
+			ova: [
+				['INFOGRAFÍA INTERACTIVA DE EJEMPLO', 'https://campus.virtual.unal.edu.co/mod/page/view.php?id=700227'],
+			],
 			pdf: [
-				['GUIA METODOLOGICA INFOGRAFIA', 'https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700225'],
-				['GUIA DE TRABAJO ESCRITO', 'https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700249'],
+				['GUÍA METODOLÓGICA INFOGRAFÍA', 'https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700225'],
+				['GUÍA DE TRABAJO ESCRITO', 'https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700249'],
+				['RÚBRICA DE INFOGRAFÍA','https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700226'],
+				['RÚBRICA ASUNTOS DE GÉNERO','https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700460']
 			],
 			video: [],
 			tool: [],
@@ -77,10 +81,13 @@ const data = {
 		},
 		3 : {
 			ova: [
+				['INFOGRAFÍA INTERACTIVA DE EJEMPLO', 'https://campus.virtual.unal.edu.co/mod/page/view.php?id=700461'],
 			],
 			pdf: [
-				['GUIA METODOLOGICA INFOGRAFIA', 'https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700459'],
-				['GUIA DE TRABAJO ESCRITO', 'https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700483'],
+				['GUÍA METODOLÓGICA INFOGRAFÍA', 'https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700459'],
+				['GUÍA DE TRABAJO ESCRITO', 'https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700483'],
+				['RÚBRICA DE INFOGRAFÍA','https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700460'],
+				['RÚBRICA ASUNTOS DE GÉNERO','https://campus.virtual.unal.edu.co/mod/resource/view.php?id=755623']
 			],
 			video: [],
 			tool: [],
@@ -131,7 +138,7 @@ const LobbyCont = () => {
 						</div>
 				}
 			</div>
-		{selector === '1' || selector === '2' 
+		{selector === '1' || selector === '2' || selector === '3' 
 			? <div>
 				<h3 className="title-content" style={{fontSize: '22px'}}>
 					Recursos del Piso

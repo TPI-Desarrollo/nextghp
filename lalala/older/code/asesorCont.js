@@ -34,14 +34,14 @@ const data = {
 		},
 		3 : {
 			ova: [
-				['Infografia Interactiva de Ejemplo', 'https://campus.virtual.unal.edu.co/mod/page/view.php?id=700227'],
+				['GRABACIONES CONVERSATORIOS PISO 3','https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700214'],
 			],
 			pdf: [
 			],
 			video: [
-				['Videos Conversatorios 17 de Noviembre', 'https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700214'],
 			],
 			tool: [
+				['ENCUESTA DE PERCEPCIÓN CONVERSATORIOS PISO 3','https://campus.virtual.unal.edu.co/mod/feedback/view.php?id=700210'],
 			],
 		},
 		4 : {
@@ -121,14 +121,14 @@ const data = {
 		},
 		3 : {
 			ova: [
-				['Infografia Interactiva de Ejemplo', 'https://campus.virtual.unal.edu.co/mod/page/view.php?id=700461'],
+				['GRABACIONES CONVERSATORIOS PISO 3','https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700448'],
 			],
 			pdf: [
 			],
 			video: [
-				['Videos Conversatorios 17 de Noviembre', 'https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700448'],
 			],
 			tool: [
+				['ENCUESTA DE PERCEPCIÓN CONVERSATORIOS PISO 3','https://campus.virtual.unal.edu.co/mod/feedback/view.php?id=700444'],
 			],
 		},
 		4 : {
@@ -240,7 +240,7 @@ const AsesorCont = () => {
 					    </div>
 			    }
 		    </div>
-	    {selector === '1' || selector === '2' 
+	    {selector === '1' || selector === '2' || selector === '3' 
 		    ? <div>
 	    <div className="src-grid">
 		    {data[group][selector].ova[0] ? 

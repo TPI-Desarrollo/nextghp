@@ -33,7 +33,7 @@ const GroupSel = ({group, setGroup}) => {
 					onClick={() => setGroup('cuatro')}
 					primary={group === 'cuatro'}
 				>
-							Horario 2 - 4 pm
+							Horario 4 - 6 pm
 				</Group>
 			</GrContainer>
 	);

@@ -21,17 +21,18 @@ const Button = styled.div`
 	justify-content: space-evenly;
 	align-items: center;
 	padding: 2vh 0px;
-	border-radius: 0 10px 10px 0;
 	font-weight: bold;
 	width: 100%;
-	transition: 0.5s;
+	transition: 0.5s ease;
 
-	background-color: ${p => p.active ? '#303CFE' : null};
 	color: ${p => p.active ? '#fff' : null};
+	background-color: ${p => p.active ? '#303CFE' : null};
 	border-left: solid ${p => p.active ? '5px' : '0'} #FFC024;
+	border-radius: ${p => p.active ? '0 10px 10px 0' : '0'};
 	transform: ${p => p.active ? 'scale(1.02)' : null};
 
 	:hover {
+		cursor: pointer;
 		background-color: #303CFE;
 		color: #ffffff;
 	}
