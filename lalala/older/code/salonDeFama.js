@@ -195,7 +195,7 @@ const Faqs = () => {
 				</span>
 			</div>
 			<div className="teams-board">
-				<iframe id="iframe-lead" className="leaderboard-classname" width="100%" height="700" src="https://datastudio.google.com/embed/u/0/reporting/1ec487f9-858c-40ad-ad85-dc3d3c361dfc/page/jPHdC">
+				<iframe id="iframe-lead" className="leaderboard-classname" width="100%" height="200" src="https://datastudio.google.com/embed/u/0/reporting/1ec487f9-858c-40ad-ad85-dc3d3c361dfc/page/jPHdC">
 				</iframe>	
 			</div>
 		</div>

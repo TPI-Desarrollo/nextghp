@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import NavCont from './main/navBar'
 import NavMob from './main/navMobile'
+import RightBar from './main/rightBar'
+
+import { Modal, useModal } from '../UIcomponents/modal'
 
 const Container = styled.div`
 	overflow: hidden;
@@ -23,27 +26,6 @@ const Container = styled.div`
 			"ct";
 	}
 `
-const Right = styled.div`
-	grid-area: rb;
-	position: sticky;
-	top: 5px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	background-color: #fff;
-	padding: 0px 10px;
-	margin: 5px 2px;
-	height: 98vh;
-	box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.15);
-
-	@media screen and (max-width: 800px) {
-		position: absolute;
-		width: 0px;
-		height: 0px;
-		padding: 0px;
-		right: 0px;
-	}
-`
 const Content = styled.div`
 	grid-area: ct;
 	padding: 0 47px 150px 30px;
@@ -58,12 +40,22 @@ const Content = styled.div`
 `
 
 const QV = ({ children, pg }) => {
+	const [isOpen, openModal, closeModal] = useModal(false)
   return (
 		<Container>
 			<Content>
 				{children}
+			<Modal 
+				isOpen={isOpen}
+				closeM={closeModal}
+				title="Noticiero"
+			>
+				laeluaoehu
+			</Modal>
 			</Content>
-			<Right/>
+			<RightBar 
+				openNoti={openModal}
+			/>
 			<NavCont pg={pg}/>
 			<NavMob pg={pg}/>
 		</Container>
