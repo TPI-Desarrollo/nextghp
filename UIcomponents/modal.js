@@ -19,7 +19,7 @@ const Content = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: column;
-  background-color: #eee;
+  background-color: rgba(227, 227, 227, 0.8);;
 	border-radius: 20px;
 	height: 90%;
 	width: 90%;

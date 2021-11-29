@@ -3,7 +3,9 @@ import NavCont from './main/navBar'
 import NavMob from './main/navMobile'
 import RightBar from './main/rightBar'
 
+
 import { Modal, useModal } from '../UIcomponents/modal'
+import Noti from './noticiero'
 
 const Container = styled.div`
 	overflow: hidden;
@@ -29,14 +31,24 @@ const Container = styled.div`
 const Content = styled.div`
 	grid-area: ct;
 	padding: 0 47px 150px 30px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: -17px; 	
 	overflow-y: scroll;
 	display: flex;
 	flex-direction: column;
+
+	::-webkit-scrollbar-track {
+		border: none;
+		padding: 10px 0;
+		margin: 10px 0;
+		background-color: none;
+	}
+	::-webkit-scrollbar {
+		width: 5px;
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: #ccc;
+		border: 1px solid rgba(0,0,0,0);
+	}
 `
 
 const QV = ({ children, pg }) => {
@@ -50,12 +62,11 @@ const QV = ({ children, pg }) => {
 				closeM={closeModal}
 				title="Noticiero"
 			>
-				laeluaoehu
+				<Noti/>
 			</Modal>
 			</Content>
-			<RightBar 
-				openNoti={openModal}
-			/>
+
+			<RightBar	openNoti={openModal} />
 			<NavCont pg={pg}/>
 			<NavMob pg={pg}/>
 		</Container>

@@ -2,25 +2,26 @@ import { prefix } from '../../../utils/prefix.js';
 import styled from 'styled-components';
 
 const Container = styled.div`
-	background-color: #F4F7FD;
 	border-radius: 20px;
 	height: 100%;
 `
 const TeamTop = styled.div`
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 3em;
-	height: 3em;
+	padding: .3em 3em;
+	margin: .5em;
+	min-height: 3em;
 	background-color: #FFC024;
-	border-radius: 0  0 20px 20px;
+	border-radius: 10px;
 `
 const Title = styled.h2`
 	color: black;
 	margin: 0;
 `
 const TeamsBoard = styled.div`
-	padding: 1%;
+	padding: 1em;
 	height: 90%;
 
 	iframe {

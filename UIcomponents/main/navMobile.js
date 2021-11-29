@@ -37,6 +37,7 @@ const Container = styled.nav`
 	box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.4);
 	justify-content: center;
 	align-items: center;
+	z-index: 2;
 
 	@media screen and (max-width: 800px) {
 		display: flex;
