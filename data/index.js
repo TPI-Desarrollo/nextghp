@@ -2,6 +2,7 @@ import etesc from './etesc.json'
 import zones from './zones.json'
 import lobbydata from './zonesCont/lobby.json'
 import asesordata from './zonesCont/asesor.json'
+import noti from './noti.json'
 
 const state = {
 	pisoA: 2
@@ -22,3 +23,5 @@ export const getLobbyData = (grp, piso) => lobbydata[grp][piso]
 export const getAsesorSrc = (grp, piso) => asesordata.src[grp][piso]
 export const getAsesorVir = () => asesordata.virtual
 export const getAsesorFaq = () => asesordata.faqs
+
+export const getNoti = () => noti
