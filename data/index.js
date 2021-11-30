@@ -2,6 +2,7 @@ import etesc from './etesc.json'
 import zones from './zones.json'
 import lobbydata from './zonesCont/lobby.json'
 import asesordata from './zonesCont/asesor.json'
+import webinardata from './zonesCont/webinar.json'
 import noti from './noti.json'
 
 const state = {
@@ -24,4 +25,8 @@ export const getAsesorSrc = (grp, piso) => asesordata.src[grp][piso]
 export const getAsesorVir = () => asesordata.virtual
 export const getAsesorFaq = () => asesordata.faqs
 
+// WEBINARS
+export const getWebinarData = () => webinardata
+
+// NOTI
 export const getNoti = () => noti
