@@ -1,5 +1,6 @@
 import { prefix } from '../../../utils/prefix.js';
 import { useState } from 'react'
+import Link from 'next/link'
 
 import styled from 'styled-components';
 import QV from '../../../UIcomponents/qv';
@@ -7,9 +8,11 @@ import ZoneHeader from '../../../UIcomponents/zoneHeader'
 import GroupSel from '../../../UIcomponents/groupSel'
 import Carousel from '../../../UIcomponents/webinarCarousel'
 
+import { getWebinarData } from '../../../public/data'
+
 const Header = styled.div`
 	display: flex;
-	margin-top: 1em;
+	margin-top: 2em;
 	padding: 0;
 	justify-content: space-between;
 	align-items: center;
@@ -70,52 +73,38 @@ const Img = styled.img`
 	}
 `
 
-const data = [
-	[
-	{
-		n: 2,
-		name: 'Pasos clave para emprender con exito',
-		expo: 'Luis Felipe Batero',
-		date: '24 Noviembre 2021',
-		link: {
-			dos: 'https://forms.gle/VqqMmdLCB2wJF2oLA',
-			cuatro: 'https://forms.gle/VqqMmdLCB2wJF2oLA'
-		},
-		state: 'prox'
-	},
-	{
-		n: 1,
-		name: 'Innovación en iluminación y alumbrado',
-		expo: 'Mario Quiroga',
-		date: '17 Noviembre 2021',
-		link: {
-			dos: 'https://campus.virtual.unal.edu.co/mod/url/view.php?id=700382',
-			cuatro: 'https://campus.virtual.unal.edu.co/mod/url/view.php?id=700611'
-		},
-		state: 'pass'
-	}
-	],
-]
 
 const Webi = () => {
 	const [group, setGroup] = useState("dos")
+	const data = getWebinarData()
+	const titleA = data.titles[0]
+	const titleB = data.titles[1]
 	return <QV pg="Zonas Comunes">
 		<ZoneHeader	zone={1}/>
 		<GroupSel group={group} setGroup={setGroup}/>
 		<Header>
 			<Text>
-				<Title>WEBINARS</Title>
-				<Desc>EN INNOVACION TECNOLOGICA Y EMPRENDIMIENTO <R>2021-2</R></Desc>
+				<Title>{titleA[0]}</Title>
+				<Desc>{titleA[1]}<R>{titleA[2]}</R></Desc>
 			</Text>
 			<Inscrip>
 				Inscribite Aquí
 			</Inscrip>
 		</Header>
-		<Carousel data={data} grp={group}/>
+		<Carousel data={data['2021s2']} grp={group}/>
+		<Header>
+			<Text>
+				<Title>{titleB[0]}</Title>
+				<Desc>{titleB[1]}<R>{titleB[2]}</R></Desc>
+			</Text>
+		</Header>
+		<Carousel data={data['2021s1']} grp={group}/>
 		<Header>
 			<Desc>Mira los <R>Webinars</R> de versiones anteriores</Desc>
 		</Header>
-		<Img src={`${prefix}/imgs/webinars/antes.png`}/>
+		<Link href="https://www.youtube.com/watch?v=rBoyRR4KGaE&list=PLvLMsmXmVy6LHh1oouUSUtIebNmtJdleH&ab_channel=Facultaddeingenier%C3%ADa-UniversidadNacionaldeColombia">
+			<Img src={`${prefix}/imgs/webinars/antes.png`}/>
+		</Link>
 	</QV>
 }
 

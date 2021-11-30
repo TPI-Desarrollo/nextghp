@@ -20,7 +20,7 @@ const Dot = styled.div`
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+	background-color: ${p => p.active ? 'blue' : '#bbb'};
   border-radius: 50%;
   display: inline-block;
   transition: 0.6s ease;
@@ -81,26 +81,29 @@ const Date = styled.h4`
 	margin: 0;
 `
 const Title = styled.p`
+	text-align: center;
 	font-weight: bold;
 	font-size: 14px;
+	width: 90%;
 	margin: 10px 0 0 0;
 `
 const Expo = styled.p`
+	text-align: center;
 	font-weight: bold;
 	font-size: 12px;
 	color: blue;
+	width: 90%;
 	margin: 0;
 `
 const CardCont = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 `
 
 const WebCard = ({item, grp, active}) => {
 	const group = grp ? grp : 'dos'
-	console.log(item)
 	return <Cards>
 		{item.map((c,i) =>
 		<CardCont key={`crd${i}`}>
@@ -111,11 +114,11 @@ const WebCard = ({item, grp, active}) => {
 								<div>PROXIMAMENTE</div>
 								<Date>{c.date}</Date>
 							</Text>
-						: <WebImg src={`${prefix}/imgs/webinars/${c.n}.png`}/>
+						: <WebImg src={`${prefix}/imgs/webinars/${c.n}.jpg`}/>
 					}
 				</Card>
 			</Link>
-			<Title>{c.n}. {c.name}</Title>
+			<Title>{c.name}</Title>
 			<Expo>{c.expo}</Expo>
 		</CardCont>
 		)}
@@ -124,23 +127,42 @@ const WebCard = ({item, grp, active}) => {
 
 const Carousel = ({ data, group }) => {
 	const [sel, setSel] = useState(0)
+	const setSlide = (num) => {
+		const newSel = sel - num
+		if(newSel < 0){
+			return setSel(data.length-1)
+		}
+		if(newSel === data.length){
+			return setSel(0)
+		}
+		setSel(newSel)
+	}
 	return(
 		<Container>
 			<Selector>
-				<Button>&#10094;</Button>
+				<Button onClick={() => setSlide(-1)}>
+					&#10094;
+				</Button>
 				{data.map((sld, i) => 
 					<Dot 
-						key={`sld${i}`}
-					/>)}
-				<Button>&#10095;</Button>
+						onClick={() => setSel(i)}
+						active={sel === i}
+						key={`sld${i}`} 
+					/>
+				)}
+				<Button onClick={() => setSlide(1)}>
+					&#10095;
+				</Button>
 			</Selector>
 			{data.map((sld, index) => 
+				sel === index ?
 				<WebCard
 					item={sld}
 					grp={group}
 					active={sel === index}
 					key={`sld${index}`} 
-				/>)}
+				/>
+				: null )}
 		</Container>
 	)
 }

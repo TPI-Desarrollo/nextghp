@@ -12,7 +12,7 @@ const NavImg = styled.img`
 	width: 100%;
 	bottom: 0;
 	left: 0;
-	@media screen and (max-height: 700px) {
+	@media screen and (max-height: 600px) {
 		display: none; 
 	}
 `

@@ -79,6 +79,7 @@ const NotiWidget = () => {
 				<Item 
 					onClick={() => setSel(i)}
 					active={i === sel}
+					key={`noti${i}`}
 				>
 					<Img src={`${prefix}/imgs/noti/video.png`}/>
 					{i+1} ) {n.fecha}
