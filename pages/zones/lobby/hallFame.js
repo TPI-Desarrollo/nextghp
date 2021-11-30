@@ -30,6 +30,10 @@ const TeamsBoard = styled.div`
 		border: none;
 		border-radius: 20px;
 	}
+
+	@media screen and (max-width: 620px) {
+		height: 70%;
+	}
 `
 const SelectGrp = styled.div`
 	display: flex;

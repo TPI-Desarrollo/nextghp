@@ -30,8 +30,8 @@ const Iframe = styled.iframe`
 
 const NotiWidget = ({open}) => {
 	const noti = getNoti() 
-	const video = noti[noti.length - 1] 
-		? noti[noti.length - 1].video : null
+	const video = noti[0] 
+		? noti[0].video : null
 	return (
 		<Container onClick={open}>
 			<Img src={`${prefix}/imgs/noti/news.png`}/>

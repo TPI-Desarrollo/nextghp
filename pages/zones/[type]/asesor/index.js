@@ -23,14 +23,14 @@ const types = [
 		title: 'PREGUNTAS FRECUENTES',
 		link: '/zones/faq/asesor',
 		type: 'faq'
-	},
+	}
 ]
 
 const SelContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	margin: .8em 0 2em 1em;
+	margin: .8em 0 3em 1em;
 	min-height: 3em;
 `
 const SelItem = styled.span`

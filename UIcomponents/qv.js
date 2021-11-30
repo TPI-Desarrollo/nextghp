@@ -30,7 +30,7 @@ const Container = styled.div`
 `
 const Content = styled.div`
 	grid-area: ct;
-	padding: 0 47px 150px 30px;
+	padding: 0 1em 150px 1em;
 	overflow-y: scroll;
 	display: flex;
 	flex-direction: column;

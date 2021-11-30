@@ -42,7 +42,7 @@ const Inscrip = styled.div`
 	box-sizing: border-box;
 	border: 1.5px solid #172BEF;
 	border-radius: 5px;
-	height: 30px;
+	min-height: 30px;
 	justify-content: center;
 	align-items: center;
 	background-color: #F4F7FD;

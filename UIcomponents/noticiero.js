@@ -10,6 +10,11 @@ const Container = styled.div`
 	grid-gap: 0 2em;
 	padding: 0 1em;
 	width: 100%;
+
+	@media screen and (max-width: 800px) {
+		display: flex;
+		flex-direction: column;
+	}
 `
 const Title = styled.h2`
 	grid-column: span 2;
@@ -33,10 +38,26 @@ const List = styled.div`
 		background-color: #888;
 		border: 1px solid rgba(0,0,0,0);
 	}
+
+	@media screen and (max-width: 800px) {
+		height: 30%;
+		margin-bottom: .2em;
+	}
 `
 const HeaderList = styled.img`
 	width: 100%;
 	margin-bottom: 1em;
+`
+const Iframe = styled.iframe`
+	width: 100%;
+	height: 80%;
+	border-radius: 1em; 
+	grid-row: span 2;
+
+	@media screen and (max-width: 800px) {
+		height: 22%;
+		margin-bottom: .2em;
+	}
 `
 const Item = styled.div`
 	display: flex;
@@ -56,22 +77,19 @@ const Img = styled.img`
 
 const NotiWidget = () => {
 	const noti = getNoti() 
-	const [sel, setSel] = useState(noti.length-1)
+	const [sel, setSel] = useState(0)
 
 	return (
 		<Container>
 			<Title>
 				{noti[sel].fecha}
 			</Title>
-			<iframe 
-				width="100%"
-				height="80%"
+			<Iframe 
 				src={`https://www.youtube.com/embed/${noti[sel].video}`}	
 				frameBorder="0" 
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 				allowFullScreen
 				title="Noticias" 
-				style={{borderRadius: '1em', gridRow: 'span 2'}}
 			/> 
 			<HeaderList src={`${prefix}/imgs/noti/banner.png`}/>
 			<List>

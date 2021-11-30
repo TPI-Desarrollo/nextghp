@@ -1,98 +1,34 @@
-import React, { useState, useRef } from 'react';
-import { Page } from 'react-pdf';
-import { Document } from 'react-pdf/dist/esm/entry.webpack';
-
+import { Worker, Viewer } from '@react-pdf-viewer/core';
+import { prefix } from '../utils/prefix.js';
 import styled from 'styled-components'
 
-const PdfCont = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 10px;
-	background-color: #ddd;
-	border-radius: 20px;
-`
-const PageSel = styled.div`
-	display: flex;
-	padding: 10px 5px;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 15px;
-  font-weight: bold;
+import '@react-pdf-viewer/core/lib/styles/index.css';
 
-  button {
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 5px 10px;
-    background-color: #1920EF;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease;
-  }
-  button:hover {
-    transform: scale(1.03);
-  }
+const Center = styled.div`
+	width: 100%;
+`
+const Container = styled.div`
+	height: 700px;
+	width: 90%;
+	margin: 0 auto;
+	border: 2px solid blue;
+
+	@media screen and (min-height: 600px) {
+		height: 500px;
+		width: 100%;
+	}
 `
 
-const Pdf = ({src}) => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const ref = useRef(null)
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-    setPageNumber(1);
-  }
-  function changePage(offset) {
-    setPageNumber(prevPageNumber => prevPageNumber + offset);
-  }
-  function previousPage() {
-    changePage(-1);
-  }
-  function nextPage() {
-    changePage(1);
-  }
-
-  const width = ref.current?.clientWidth - 30
-  console.log(width)
-  return (
-    <PdfCont ref={ref}>
-      <PageSel>
-        <button
-          type="button"
-          disabled={pageNumber <= 1}
-          onClick={previousPage}
-        >
-          Anterior
-        </button>
-        <span>
-          {pageNumber || (numPages ? 1 : '--')} / {numPages || '--'}
-        </span>
-        <button
-          type="button"
-          disabled={pageNumber >= numPages}
-          onClick={nextPage}
-        >
-          Siguiente
-        </button>
-      </PageSel>
-      <Document
-        file={src}
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
-        <Page 
-          pageNumber={pageNumber} 
-          width={width}
-        />
-      </Document>
-    </PdfCont>
-  );
+const Pdf = ({file}) => {
+	return(
+	<Center>
+		<Worker workerUrl="https://unpkg.com/pdfjs-dist@2.6.347/build/pdf.worker.min.js">
+			<Container>
+				<Viewer fileUrl={`${prefix}/${file}`}/>
+			</Container>
+		</Worker>
+	</Center>
+	)
 }
 
-export default Pdf;
+export default Pdf

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { prefix } from '../../utils/prefix.js';
 import QV from '../../UIcomponents/qv';
+import Pdf from '../../UIcomponents/pdf';
 
 import Header from '../../UIcomponents/header'
 const imgPrin = `${prefix}/imgs/header/principal.png`
@@ -70,6 +71,7 @@ const Login = () => {
 			<Desc>{prog.desc}</Desc>
 		</ContProg>
 		<Title>Guia del Juego</Title>
+		<Pdf file="content/guia.pdf"/>
 	</QV>
 }
 export default Login

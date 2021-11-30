@@ -17,9 +17,13 @@ const AsesorCard = styled.div`
 	display: grid;
 	grid-template-columns: repeat(1, 1fr 2fr 2fr);
 	grid-gap: 10px;
+
+	@media screen and (max-width: 620px) {
+		grid-template-columns: 1fr;
+	}
 `
 const Img = styled.img`
-	border-radius: 20px;
+	border-radius: 2em;
 	margin: auto;
 	width: 110px;
 	height: 110px;
@@ -40,6 +44,9 @@ const CoinsCont = styled.div`
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content: space-between;
+	@media screen and (max-width: 620px) {
+		align-items: flex-start;
+	}
 `
 const AsesorField = styled.span`
 	text-align: center;
