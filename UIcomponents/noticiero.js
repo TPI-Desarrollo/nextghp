@@ -17,7 +17,7 @@ const Title = styled.h2`
 	color: #22c;
 `
 const List = styled.div`
-	height: 90%;
+	height: 78%;
 	overflow-y: scroll;
 
 	::-webkit-scrollbar-track {
@@ -65,7 +65,7 @@ const NotiWidget = () => {
 			</Title>
 			<iframe 
 				width="100%"
-				height="90%"
+				height="80%"
 				src={`https://www.youtube.com/embed/${noti[sel].video}`}	
 				frameBorder="0" 
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
