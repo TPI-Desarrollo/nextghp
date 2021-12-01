@@ -53,7 +53,7 @@ const Text = styled.span`
 const Container = styled.nav`
 	grid-area: sb;
 	position: sticky;
-	background-color:#1920EF;
+	background-color: #1920EF;
 	padding: 10px 0px 0px 0px;
 	margin: 12px 0px 12px 8px; 
 	border-radius:20px; 

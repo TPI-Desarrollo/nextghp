@@ -7,14 +7,13 @@ import Calendar from '../calendar'
 
 const Container = styled.div`
 	grid-area: rb;
-	position: sticky;
-	top: 5px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	background-color: #fff;
 	padding: 0px .5em;
 	margin: 5px 2px;
+	top: 5px;
 	height: 98vh;
 	box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.15);
 
@@ -32,7 +31,7 @@ const ItemB = styled.div`
   color: black;
   padding: .5em 1em;
   font-weight: 900;
-  font-size: 1.2em;
+  font-size: 1em;
 	text-align: end;
   transition: 0.3s;
 
