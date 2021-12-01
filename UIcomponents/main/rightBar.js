@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { prefix } from '../../utils/prefix.js';
 
 import NotiWidget from '../notiWidget'
+import Calendar from '../calendar'
 
 const Container = styled.div`
 	grid-area: rb;
@@ -45,6 +46,7 @@ const ItemB = styled.div`
 const RightBar = ({openNoti}) => {
 	return (
 		<Container>
+			<Calendar/>
 			<NotiWidget open={openNoti}/>
 			<Link href="https://drive.google.com/file/d/1DsxZt4232mjOLK8-4hVIm0QOPxQJ9JrX/view?usp=sharing">
 				<ItemB>
