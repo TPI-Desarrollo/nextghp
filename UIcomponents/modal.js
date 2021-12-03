@@ -3,7 +3,7 @@ import { prefix } from '../utils/prefix.js';
 import { useState } from 'react'
 
 const Container = styled.div`
-	position: fixed;
+	position: absolute;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -11,6 +11,7 @@ const Container = styled.div`
 	height: 100%;
 	width: 100%;
 	transition: all .6s ease;
+	top: 0;
 	left: 0;
 	opacity: ${p => p.isOpen ? '1' : '0'};
 	z-index: ${p => p.isOpen ? '5' : '-5'};
@@ -55,10 +56,13 @@ export const useModal = (initial) => {
 	return [isOpen, openModal, closeModal]
 } 
 
-export const Modal = ({ isOpen, closeM, title, children }) => {
+export const Modal = ({ isOpen, closeM, title, width, children }) => {
 	return (
 		<Container isOpen={isOpen}>
-			<Content isOpen={isOpen}>
+			<Content 
+				isOpen={isOpen}
+				style={{width}}
+			>
 				<Header>
 					<Title>{title}</Title>
 					<CloseImg onClick={closeM} src={`${prefix}/imgs/exit.png`}/>

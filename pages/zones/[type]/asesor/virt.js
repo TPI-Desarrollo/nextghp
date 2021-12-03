@@ -1,7 +1,11 @@
+import { useState } from 'react'
 import { prefix } from '../../../../utils/prefix.js';
 import { getAsesorVir } from '../../../../public/data'
+import { Modal, useModal } from '../../../../UIcomponents/modal'
+import AsesorContact from '../../../../UIcomponents/asesorContact'
 
 import styled from 'styled-components';
+
 const Cont = styled.div`
 	padding: 0px 20px;
 	display: ${p => p.active ? 'flex' : 'none'};
@@ -90,6 +94,13 @@ const Button = styled.button`
 
 const Virt = ({active}) => {
 	const data = getAsesorVir()
+	const [isOpen, openModal, closeModal] = useModal(false)
+	const [sel, setSel] = useState({})
+
+	const chooseAse = (i) => {
+		setSel(i)
+		openModal()
+	}
 	return <Cont active={active}>
 		{data.map(i => 
 			<AsesorCard key={i.nombre}>
@@ -106,10 +117,18 @@ const Virt = ({active}) => {
 						<CoinsImg src={`${prefix}/imgs/innocoin1.png`}/>
 						{i.costo}
 					</Coins>
-					<Button>Mas Información</Button>
+					<Button onClick={() => chooseAse(i)}>Mas Información</Button>
 				</CoinsCont>
 			</AsesorCard>
 		)}
+			<Modal 
+				isOpen={isOpen}
+				closeM={closeModal}
+				title="Contacta a tu Asesor"
+				width="400px"
+			>
+				<AsesorContact asesor={sel}/>
+			</Modal>
 	</Cont>
 }
 
