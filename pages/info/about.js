@@ -1,9 +1,8 @@
 import { prefix } from '../../utils/prefix.js';
+import { getInfo } from '../../public/data'
 
 import styled from 'styled-components'
 
-const infoA = [1,2,3,4]
-const infoB = [5,6,7,8,9,10]
 
 const Title = styled.h3`
 	font-size: 20px;
@@ -40,13 +39,15 @@ const GridImg = styled.div`
 `
 
 const About = () => {
+	const data = getInfo()
+	const {infoA, infoB} = data
 	return (
 		<div>
 			<Title>_Acerca de Quanticon Valley</Title>
 			<GridInfo>
 				<div>
-					<p>El juego Quanticon Valley es una apuesta de gamificacion desarrollada y propuesta por la Facultad de ingenieria. Participaron el programa innovaTE, grupo LIATER, el programa de innovacion y el Taller de Proyectos Interdisciplinarios (TPI).</p>
-					<p>Se basa en la experiencia de TPI, busca promover la motivacion y el desarrolla de habilidades blandas de sus participantes con el desarrollo de un proyecto. Damos una calurosa bienvenida y esperamos contar con cualquier aporte para la mejora continua.</p>
+					<p>{data.qv[0]}</p>
+					<p>{data.qv[1]}</p>
 				</div>
 				<img src={`${prefix}/imgs/info/QV.png`}/>
 			</GridInfo>

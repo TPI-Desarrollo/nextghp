@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { prefix } from '../../utils/prefix.js';
 
+import { getOffice } from '../../public/data'
+
 import styled from 'styled-components'
 import QV from '../../UIcomponents/qv';
 import Header from '../../UIcomponents/header'
@@ -15,22 +17,10 @@ const Grid = styled.div`
 	grid-gap: 3em;
 	margin: 10px 8%;
 `
-const office = [
-	{
-		name: 'OFICINAS',
-		desc: '2-4 pm',
-		link: 'https://docs.google.com/spreadsheets/d/1nLoG42SGWYe4xi7BHpKh6goHHLkImDSj7XKUu0XjFU0/edit#gid=1528342584',
-		img: '/imgs/office/btn.png'
-	},
-	{
-		name: 'OFICINAS',
-		desc: '4-6 pm',
-		link: 'https://docs.google.com/spreadsheets/d/1nLoG42SGWYe4xi7BHpKh6goHHLkImDSj7XKUu0XjFU0/edit#gid=23923283',
-		img: '/imgs/office/btn.png'
-	}
-]
 
 const Office = () => {
+	const data = getOffice()
+
 	return <QV pg="Oficina">
 		<Header
 			title="Oficinas"
@@ -38,7 +28,7 @@ const Office = () => {
 			imgH={imgOffice}
 		/>
 		<Grid>
-			{office.map(item => 
+			{data.map(item => 
 				<Element 
 					key={item.desc}
 					item={item}

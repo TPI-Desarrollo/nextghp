@@ -18,6 +18,7 @@ const ZElement = styled.div`
 	transition: 0.3s;
 
 	:hover {
+		cursor: pointer;
 		transform: scale(1.02);
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 	}

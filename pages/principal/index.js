@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { prefix } from '../../utils/prefix.js';
+import { getDataProg } from '../../public/data'
+
 import QV from '../../UIcomponents/qv';
 import Pdf from '../../UIcomponents/pdf';
 
@@ -45,14 +47,10 @@ const Desc = styled.h3`
 	font-weight: normal;
 `
 
-const prog = {
-	num: '40%',
-	piso: '3er Piso',
-	title: 'Fase de Ideación',
-	desc: 'Plantea posibles Soluciones'
-}
 
 const Login = () => {
+	const prog = getDataProg()
+
   return <QV pg="Principal">
 		<Header
 			title="Quanticon Valley"

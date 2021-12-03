@@ -100,7 +100,7 @@ const NotiWidget = () => {
 					key={`noti${i}`}
 				>
 					<Img src={`${prefix}/imgs/noti/video.png`}/>
-					{i+1} ) {n.fecha}
+					 {n.fecha}
 				</Item>
 			)}
 			</List>

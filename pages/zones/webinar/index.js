@@ -12,12 +12,12 @@ import { getWebinarData } from '../../../public/data'
 
 const Header = styled.div`
 	display: flex;
-	margin-top: 2em;
+	margin: 2em auto 0 auto;
 	padding: 0;
 	justify-content: space-between;
 	align-items: center;
 	color: #172BEF;
-	width: 100%;
+	width: 90%;
 	border-bottom: solid 3px #DFE2E4;
 `
 const Text = styled.div`

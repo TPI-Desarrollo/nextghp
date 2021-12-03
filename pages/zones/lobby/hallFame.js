@@ -1,5 +1,6 @@
 import { prefix } from '../../../utils/prefix.js';
 import styled from 'styled-components';
+import { getHFData } from '../../../public/data'
 
 const Container = styled.div`
 	border-radius: 20px;
@@ -22,7 +23,7 @@ const Title = styled.h2`
 `
 const TeamsBoard = styled.div`
 	padding: 1em;
-	height: 90%;
+	height: 85%;
 
 	iframe {
 		width: 100%; 
@@ -60,16 +61,10 @@ const Button = styled.div`
 	}
 `
 
-const studio = {
-	dos: "https://datastudio.google.com/embed/u/0/reporting/1ec487f9-858c-40ad-ad85-dc3d3c361dfc/page/jPHdC",
-	cuatro: "https://datastudio.google.com/embed/u/0/reporting/1f58bcb8-5dae-4cf5-83b0-7cb513760d2c/page/QnbdC"
-}
-const btns = [ 
-	{gr: 'dos',    name: 'Horario 2-4'} ,
-	{gr: 'cuatro', name: 'Horario 4-6'} 
-]
 
 const HallFame = ({ group, setGroup }) => {
+	const { studio, btns } = getHFData()
+	console.log(studio, btns)
 	return(
 		<Container>
 			<TeamTop>

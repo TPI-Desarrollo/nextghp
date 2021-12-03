@@ -1,20 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components';
+import { getAsesorFaq } from '../../../../public/data'
 
-const data = [
-    {
-	menu: 'faq1',
-	name: '¿Que es Quanticon Valley?',
-	desc: `El juego Quanticon Valley es una apuesta de gamificación desarrollada y propuesta por la Facultad de Ingeniería. Participaron el programa innovaTE, grupo LIATER, el programa de innovación y el Taller de Proyectos Interdisciplinarios (TPI).
-	    Se basa en la experiencia de TPI, busca promover la motivación y el desarrollo de habilidades blandas de sus participantes con el desarrollo de un proyecto.
-	`,
-    },
-    {
-	menu: 'faq2',
-	name: '¿En qué consiste el juego Quanticon Valley?',
-	desc: `Cada equipo participante será un jugador cuyos integrantes tienen un cargo, con un mentor asignado y con mínimo un experto guía que los acompañará durante todo el recorrido por el edificio. El jugador asciende durante el semestre en el edificio de siete (7) pisos. Para ascender, requiere resolver unos retos, que le permiten ir madurando su idea y construir la solución al proyecto con una solución innovadora.`,
-    }
-]
 const Cont = styled.div`
 	padding: 0px 20px;
 	display: ${p => p.active ? 'flex' : 'none'};
@@ -64,6 +51,7 @@ const ItemTitle = styled.div`
 `
 
 const Faqs = ({active}) => {
+	const data = getAsesorFaq()
 	const [sel, setSel] = useState('')
 	const handleSel = (item) => {
 		if(item === sel){return setSel('')}
