@@ -31,6 +31,7 @@ const Event = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   border-radius: 2em;
   background-color: #1920EF;
   color: white;

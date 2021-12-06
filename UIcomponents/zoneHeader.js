@@ -32,7 +32,8 @@ const Back = styled.img`
 	height: 1.4em;
 	transition: 0.3s ease;
 	:hover {
-		transform: scale(1.08)
+		transform: scale(1.1);
+		cursor: pointer;
 	}
 `
 

@@ -15,10 +15,14 @@ const Container = styled.div`
   li {
     font-size: .92em;
   }
+
+	@media screen and (max-width: 600px) {
+    padding: 0em .5em;
+    transform: scale(0.95);
+	}
 `
 
 const AseContact = ({ asesor }) => {
-  console.log(asesor)
   return (
     <Container>
       <h3>Instrucciones para solicitar una Asesoria</h3>

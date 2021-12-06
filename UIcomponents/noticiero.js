@@ -22,7 +22,7 @@ const Title = styled.h2`
 	color: #22c;
 `
 const List = styled.div`
-	height: 78%;
+	height: 60%;
 	overflow-y: scroll;
 
 	::-webkit-scrollbar-track {
@@ -39,8 +39,8 @@ const List = styled.div`
 		border: 1px solid rgba(0,0,0,0);
 	}
 
-	@media screen and (max-width: 800px) {
-		height: 30%;
+	@media screen and (max-width: 600px) {
+		max-height: 20%;
 		margin-bottom: .2em;
 	}
 `
@@ -50,12 +50,12 @@ const HeaderList = styled.img`
 `
 const Iframe = styled.iframe`
 	width: 100%;
-	height: 80%;
+	height: 65%;
 	border-radius: 1em; 
 	grid-row: span 2;
 
 	@media screen and (max-width: 800px) {
-		height: 22%;
+		height: 18%;
 		margin-bottom: .2em;
 	}
 `
@@ -74,6 +74,13 @@ const Item = styled.div`
 const Img = styled.img`
 	margin: .2em 2em;
 `
+const ItemTi = styled.h5`
+	margin: 0;
+`
+const ItemDa = styled.h6`
+	margin: 0;
+	font-weight: normal;
+`
 
 const NotiWidget = () => {
 	const noti = getNoti() 
@@ -82,7 +89,7 @@ const NotiWidget = () => {
 	return (
 		<Container>
 			<Title>
-				{noti[sel].fecha}
+				{noti[sel].nombre || noti[sel].fecha}
 			</Title>
 			<Iframe 
 				src={`https://www.youtube.com/embed/${noti[sel].video}`}	
@@ -100,7 +107,10 @@ const NotiWidget = () => {
 					key={`noti${i}`}
 				>
 					<Img src={`${prefix}/imgs/noti/video.png`}/>
-					 {n.fecha}
+					<div>
+						<ItemTi>{n.nombre || n.fecha}</ItemTi>
+						<ItemDa>{n.nombre ? n.fecha : null}</ItemDa>
+					</div>
 				</Item>
 			)}
 			</List>

@@ -24,6 +24,8 @@ const Content = styled.div`
 	border-radius: 20px;
 	height: 90%;
 	width: 90%;
+	max-height: 600px;
+	max-width: 1200px;
 	z-index: 6;
   transition-delay: .6s;
 	transition: all .4s ease;
@@ -61,7 +63,7 @@ export const Modal = ({ isOpen, closeM, title, width, children }) => {
 		<Container isOpen={isOpen}>
 			<Content 
 				isOpen={isOpen}
-				style={{width}}
+				style={{maxWidth: width}}
 			>
 				<Header>
 					<Title>{title}</Title>
