@@ -24,7 +24,7 @@ const Container = styled.div`
 		height: 100%;
 		width: '100%';
 		top: 0;
-		right: ${p => p.active ? '0' : '-1000px'};
+		right: ${p => p.active ? '0' : '-1300px'};
 		margin: 0;
 		padding: 60px 1em .5em 1em;
 	}
