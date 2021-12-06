@@ -32,35 +32,20 @@
 			"entrega": [
 				["POSIBLES SOLUCIONES / INFOGRAFIA", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700231"]
 			],
-			"reto": []
+			"reto": [
+				["ENTREGABLE ASUNTOS DE GÉNERO","https://campus.virtual.unal.edu.co/mod/assign/view.php?id=755593"]
+			]
 		},
 		"4" : {
 			"entrega": [
 				["PROBLEMA / Diseño y Prototipo", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=701160"],
-				["PITCH PISO 4", ""],
 				["Avance del trabajo Escrito", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700251"],
 				["Evaluacion de Desempeños", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700274"]
 			],
 			"reto": []
 		},
-		"5" : {
-			"entrega": [
-				["PROTOTIPO FINAL, Campaña Publicitaria y Estrategia de Mercado", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=701166"],
-				["PITCH PISO 3", ""],
-				["Trabajo en Equipo", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700299"]
-			],
-			"reto": []
-		},
-		"6" : {
-			"entrega": [
-				["Validación de la Solucion", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700339"],
-				["PITCH FINAL", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700336"],
-				["Pagina Web", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700342"],
-				["entrega Final: Trabajo Escrito", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700332"],
-				["Evaluacion de Desempeños II", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700346"]
-			],
-			"reto": []
-		}
+		"5": {},
+		"6": {}
 	},
 	"cuatro": {
 		"1" : {
@@ -84,37 +69,21 @@
 		},
 		"3" : {
 			"entrega": [
-				["POSIBLES SOLUCIONES / INFOGRAFIA", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700465"],
-				["PITCH PISO 3", ""]
+				["POSIBLES SOLUCIONES / INFOGRAFIA", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700465"]
 			],
-			"reto": []
+			"reto": [
+				["ENTREGABLE ASUNTOS DE GÉNERO","https://campus.virtual.unal.edu.co/mod/assign/view.php?id=755594"]
+			]
 		},
 		"4" : {
 			"entrega": [
 				["PROBLEMA / Diseño y Prototipo", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=701161"],
-				["PITCH PISO 4", ""],
 				["Avance del trabajo Escrito", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700485"],
 				["Evaluacion de Desempeños", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700506"]
 			],
 			"reto": []
 		},
-		"5" : {
-			"entrega": [
-				["PROTOTIPO FINAL, Campaña Publicitaria y Estrategia de Mercado", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=701167"],
-				["PITCH PISO 3", ""],
-				["Trabajo en Equipo", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700531"]
-			],
-			"reto": []
-		},
-		"6" : {
-			"entrega": [
-				["Validación de la Solucion", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700571"],
-				["PITCH FINAL", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700568"],
-				["Pagina Web", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700574"],
-				["entrega Final: Trabajo Escrito", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700564"],
-				["Evaluacion de Desempeños II", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700578"]
-			],
-			"reto": []
-		}
+		"5": {},
+		"6": {}
 	}
 }
