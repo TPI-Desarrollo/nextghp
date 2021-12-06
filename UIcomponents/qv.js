@@ -2,8 +2,10 @@ import styled from 'styled-components'
 import NavCont from './main/navBar'
 import NavMob from './main/navMobile'
 import RightBar from './main/rightBar'
+import MobBar from './main/MobBar'
 
 
+import { useState } from 'react'
 import { Modal, useModal } from '../UIcomponents/modal'
 import Noti from './noticiero'
 
@@ -54,6 +56,8 @@ const Content = styled.div`
 
 const QV = ({ children, pg }) => {
 	const [isOpen, openModal, closeModal] = useModal(false)
+	const [actRight, setActRight] = useState(false)
+	const closeRight = () => {setActRight(false)}
   return (
 		<Container>
 			<Content>
@@ -67,9 +71,14 @@ const QV = ({ children, pg }) => {
 			</Modal>
 			</Content>
 
-			<RightBar	openNoti={openModal} />
+			<RightBar	
+				openNoti={openModal} 
+				active={actRight}
+				close={closeRight}
+			/>
 			<NavCont pg={pg}/>
 			<NavMob pg={pg}/>
+			<MobBar open={() => setActRight(true)}/>
 		</Container>
   );
 }

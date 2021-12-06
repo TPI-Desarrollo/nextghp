@@ -25,6 +25,10 @@ const BarProg = styled.div`
 	border-radius: .5em;
 	height: 2.4em;
 	width: 80%;
+
+	@media screen and (max-width: 800px) {
+		width: 100%;
+	}
 `
 const Prog = styled.div`
 	display: flex;

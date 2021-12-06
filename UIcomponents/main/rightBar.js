@@ -16,9 +16,17 @@ const Container = styled.div`
 	top: 5px;
 	height: 98vh;
 	box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.15);
+	transition: all .3s ease-in;
 
 	@media screen and (max-width: 800px) {
-		display: none;
+		position: absolute;
+		z-index: 3;
+		height: 100%;
+		width: '100%';
+		top: 0;
+		right: ${p => p.active ? '0' : '-1000px'};
+		margin: 0;
+		padding: 60px 1em .5em 1em;
 	}
 `
 const ItemB = styled.div`
@@ -41,10 +49,41 @@ const ItemB = styled.div`
 		cursor: pointer;
 	}
 `
+const Header = styled.div`
+	position: absolute;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: .5em;
+	background-color:#1920EF;
+	color: white;
+	z-index: 4;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 60px;
 
-const RightBar = ({openNoti}) => {
+	@media screen and (min-width: 800px) {
+		display: none;
+	}
+`
+const CloseImg = styled.img`
+	width: 2.4em;
+	transition: .3 ease;
+	:hover {
+		transform: scale(1.05);
+	}
+`
+
+const RightBar = ({openNoti, active, close}) => {
 	return (
-		<Container>
+		<Container active={active}>
+			<Header>
+					<CloseImg 
+						onClick={close}
+						src={`${prefix}/imgs/exit.png`}
+					/>
+			</Header>
 			<Calendar/>
 			<NotiWidget open={openNoti}/>
 			<Link href="https://drive.google.com/file/d/1DsxZt4232mjOLK8-4hVIm0QOPxQJ9JrX/view?usp=sharing">

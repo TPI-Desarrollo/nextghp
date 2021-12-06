@@ -7,7 +7,6 @@ const Jumbo = styled.div`
 	position: relative;
 	padding: 40px 10px 20px 20px;
 	@media screen and (max-width: 1000px) {
-		margin: 10px 0 30px 0;
 		padding: 15px;
 	}
 `
