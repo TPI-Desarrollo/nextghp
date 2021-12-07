@@ -11,7 +11,7 @@ const ZElement = styled.div`
 	justify-content: ${p => (p.type === 'twover') ? 'center' : 'flex-end'};
 	text-align: ${p => (p.type === 'twover') ? 'center' : null};
 	background: #FFFFFF;
-	padding: 0px 20px 15px 20px;
+	padding: 10px 20px 15px 20px;
 	border-radius: 20px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 20px;
@@ -53,6 +53,19 @@ const Desc = styled.span`
 
 // item => name, desc, img, link, type(twover or twohor)
 const Element = ({ item }) => {
+	if(item.target === "_blank") {
+		return(
+		<a href={item.link} target={item.target}>
+			<ZElement type={item.type}>
+				<Img src={`${prefix}${item.img}`} name={item.name}/>
+				<Text>
+					<Title>{item.name}</Title>
+					<Desc>{item.desc}</Desc>
+				</Text>
+			</ZElement>
+		</a>
+		)
+	}
 	return (
 		<Link href={item.link}>
 			<ZElement type={item.type}>

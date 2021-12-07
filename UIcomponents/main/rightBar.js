@@ -86,12 +86,12 @@ const RightBar = ({openNoti, active, close}) => {
 			</Header>
 			<Calendar/>
 			<NotiWidget open={openNoti}/>
-			<Link href="https://drive.google.com/file/d/1DsxZt4232mjOLK8-4hVIm0QOPxQJ9JrX/view?usp=sharing">
+			<a href="https://drive.google.com/file/d/1xRTV1yWZlF3viIvIS8vgQjLpMZy9AP51/view?usp=sharing" target="_blank">
 				<ItemB>
 					<img src={`${prefix}/imgs/pil.png`}/>
 					Pildoras de la semana
 				</ItemB>
-			</Link>
+			</a>
 		</Container>
 	);
 }

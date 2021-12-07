@@ -3,7 +3,8 @@
 		"name": "CAFETERIA",
 		"desc": "Conformacion de Equipos",
 		"img": "/imgs/zones/cafe.png",
-		"link": "https://ingenieria.unal.edu.co/tpi/index.php/24propuestas"
+		"link": "https://ingenieria.unal.edu.co/tpi/index.php/24propuestas",
+		"target": "_blank"
 	},
 	{
 		"name": "REUNIONES",
