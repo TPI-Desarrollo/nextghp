@@ -3,6 +3,7 @@ import { prefix } from '../utils/prefix.js';
 
 import styled from 'styled-components'
 import { getNoti } from '../public/data'
+import { useEgg, Egg } from './egg'
 
 const Container = styled.div`
 	display: grid;
@@ -22,7 +23,7 @@ const Title = styled.h2`
 	color: #22c;
 `
 const List = styled.div`
-	height: 60%;
+	height: 55%;
 	overflow-y: scroll;
 
 	::-webkit-scrollbar-track {
@@ -50,7 +51,7 @@ const HeaderList = styled.img`
 `
 const Iframe = styled.iframe`
 	width: 100%;
-	height: 65%;
+	height: 60%;
 	border-radius: 1em; 
 	grid-row: span 2;
 
@@ -85,9 +86,14 @@ const ItemDa = styled.h6`
 const NotiWidget = () => {
 	const noti = getNoti() 
 	const [sel, setSel] = useState(0)
+	const [isOpen, openEgg, closeEgg] = useEgg(false)
 
 	return (
 		<Container>
+			<Egg 
+				isOpen={isOpen}
+				closeE={closeEgg}
+			/>
 			<Title>
 				{noti[sel].nombre || noti[sel].fecha}
 			</Title>
@@ -113,6 +119,14 @@ const NotiWidget = () => {
 					</div>
 				</Item>
 			)}
+				<Item 
+					onClick={openEgg}
+				>
+					<Img src={`${prefix}/imgs/noti/video.png`}/>
+					<div>
+						<ItemTi>18-Febrero 2020</ItemTi>
+					</div>
+				</Item>
 			</List>
 		</Container>
 	);

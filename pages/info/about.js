@@ -3,6 +3,8 @@ import { getInfo } from '../../public/data'
 
 import styled from 'styled-components'
 
+import { useEgg, Egg } from '../../UIcomponents/egg'
+
 
 const Title = styled.h3`
 	font-size: 20px;
@@ -37,10 +39,20 @@ const GridImg = styled.div`
 	margin-left: 20px;
 	margin-bottom: 50px;
 `
+const Img = styled.img`
+	transition: .3s ease;
+	:hover {
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+`
 
 const About = () => {
 	const data = getInfo()
 	const {infoA, infoB} = data
+	const [isOpen, openEgg, closeEgg] = useEgg(false)
+
+
 	return (
 		<div>
 			<Title>_Acerca de Quanticon Valley</Title>
@@ -60,7 +72,16 @@ const About = () => {
 			<GridImg>
 				{infoB.map((i) => 
 				<img key={i} src={`${prefix}/imgs/info/${i}.png`}/>)}
+				<Img 
+					onClick={openEgg} 
+					width="150px" 
+					src={`${prefix}/imgs/egg.png`}
+				/>
 			</GridImg>
+			<Egg 
+				isOpen={isOpen}
+				closeE={closeEgg}
+			/>
 		</div>
 	)
 }
