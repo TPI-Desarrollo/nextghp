@@ -23,7 +23,7 @@ const Title = styled.h2`
 	color: #22c;
 `
 const List = styled.div`
-	height: 55%;
+	height: 50%;
 	overflow-y: scroll;
 
 	::-webkit-scrollbar-track {
@@ -51,7 +51,7 @@ const HeaderList = styled.img`
 `
 const Iframe = styled.iframe`
 	width: 100%;
-	height: 60%;
+	height: 55%;
 	border-radius: 1em; 
 	grid-row: span 2;
 
