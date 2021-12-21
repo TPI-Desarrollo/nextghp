@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { prefix } from '../../utils/prefix.js';
 
 import NotiWidget from '../notiWidget'
-import Calendar from '../calendar'
+import Calendar from '../calendar/index'
 
 const Container = styled.div`
 	grid-area: rb;
@@ -86,7 +86,7 @@ const RightBar = ({openNoti, active, close}) => {
 			</Header>
 			<Calendar/>
 			<NotiWidget open={openNoti}/>
-			<a href="https://drive.google.com/file/d/1xRTV1yWZlF3viIvIS8vgQjLpMZy9AP51/view?usp=sharing" target="_blank">
+			<a href="https://drive.google.com/file/d/1xRTV1yWZlF3viIvIS8vgQjLpMZy9AP51/view?usp=sharing" target="_blank" rel="noreferrer">
 				<ItemB>
 					<img src={`${prefix}/imgs/pil.png`}/>
 					Pildoras de la semana

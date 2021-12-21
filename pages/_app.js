@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import '../styles/calendar.css'
+import '../styles/calendar2.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

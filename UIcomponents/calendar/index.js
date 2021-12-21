@@ -1,22 +1,11 @@
-import Calendar from 'react-calendar';
+import Calendar from './cal'
 
 import React, { useState } from 'react';
-import { differenceInCalendarDays } from 'date-fns';
-import { prefix } from '../utils/prefix.js';
+import { prefix } from '../../utils/prefix.js';
 
 import styled from 'styled-components'
-import events from '../public/data/calendarEvents'
+import events from '../../public/data/calendarEvents'
 
-
-const isSameDay = (a, b) => {
-  return differenceInCalendarDays(a, b) === 0;
-}
-const tileClassName = ({ date, view }) => {
-  if (view === 'month') 
-    if (events.find(dDate => 
-      isSameDay(dDate[0], date))) 
-      return 'calendar-event';
-}
 
 const Container = styled.div`
   position: relative;
@@ -65,8 +54,10 @@ const Cal = () => {
   const erase = () => {
     setValue(null)
   }
-  const selected = events.find(e => 
-    e[0]?.getTime() === value?.getTime())
+  const selected = events.find(e => {
+    const date = new Date(e.y, e.m-1, e.d)
+    return date.getTime() === value?.getTime()
+  })
 
   return (
     <Container>
@@ -74,21 +65,19 @@ const Cal = () => {
         {selected
           ? <>
             <DateT>
-              {selected[0].getDate()}-
-              {selected[0].getMonth()}-
-              {selected[0].getFullYear()}
+              {selected.d}-
+              {selected.m}-
+              {selected.y}
             </DateT>
-            <Title>{selected[1]}</Title>
+            <Title>{selected.event}</Title>
             <Close onClick={erase} src={`${prefix}/imgs/exit.png`}/>
             </>
           : null
         }
       </Event>
       <Calendar
-        onChange={onChange}
-        value={value}
-        tileClassName={tileClassName}
-        locale="es"
+        handleDay={onChange}
+        events={events}
       />
     </Container>
   );
