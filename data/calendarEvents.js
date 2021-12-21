@@ -1,23 +1,23 @@
 const events = [
-  [new Date(2021,  9,  4), 'Primera Clase TPI y Inicio - Primer Piso'],
-  [new Date(2021,  9, 20), 'Entrega - Primer Piso'],
-  [new Date(2021,  9, 25), 'Inicio - Segundo Piso'],
+  {d: 8, m: 10, y: 2021, event: 'Primera Clase TPI y Inicio - Primer Piso'},
+  {d:20, m: 10, y: 2021, event: 'Entrega - Primer Piso'},
+  {d:25, m: 10, y: 2021, event: 'Inicio - Segundo Piso'},
 
-  [new Date(2021, 10,  8), 'Mentoria'],
-  [new Date(2021, 10, 10), 'Mentoria formativa (entrega de piso)'],
-  [new Date(2021, 10, 17), 'Conversatorio (Habilidades blandas, Tecnología y sociedad, Economía del conocimiento)'],
-  [new Date(2021, 10, 22), 'Charla de Género'],
-  [new Date(2021, 10, 24), 'Mentoria'],
-  [new Date(2021, 10, 29), 'Mentoria'],
+  {d: 8, m: 11, y: 2021, event: 'Mentoria'},
+  {d:10, m: 11, y: 2021, event: 'Mentoria Formativa (entrega de piso)'},
+  {d:17, m: 11, y: 2021, event: 'Conversatorio (Habilidades blandas, Tecnología y sociedad, Economía del conocimiento)'},
+  {d:22, m: 11, y: 2021, event: 'Charla de genero'},
+  {d:24, m: 11, y: 2021, event: 'Mentoria'},
+  {d:29, m: 11, y: 2021, event: 'Mentoria'},
 
-  [new Date(2021, 11,  1), 'Presentación de infografía'],
-  [new Date(2021, 11,  3), 'Entrega reto de piso (Pieza gráfica asuntos de género)'],
-  [new Date(2021, 11,  6), 'Mentoria'],
-  [new Date(2021, 11, 10), 'Primera entrega trabajo escrito'],
-  [new Date(2021, 11, 13), 'Mentoria'],
-  [new Date(2021, 11, 15), 'Conversatorio (laboratorio y prototipado)'],
+  {d: 1, m: 12, y: 2021, event: 'Presentación de infografía'},
+  {d: 3, m: 12, y: 2021, event: 'Entrega reto de piso (Pieza gráfica asuntos de género)'},
+  {d: 6, m: 12, y: 2021, event: 'Mentoria'},
+  {d:10, m: 12, y: 2021, event: 'Primera entrega trabajo escrito'},
+  {d:13, m: 12, y: 2021, event: 'Mentoria'},
+  {d:15, m: 12, y: 2021, event: 'Conversatorio (laboratorio y prototipado)'},
 
-  [new Date(2022,  0, 12), 'Mentoría formativa (entrega de piso)']
+  {d:12, m: 1, y: 2022, event: 'Mentoria formativa (entrega de piso)'},
 ]
 
 export default events
