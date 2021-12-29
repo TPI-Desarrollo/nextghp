@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useMainState } from '../../../libs/stateHooks'
 import { prefix } from '../../../utils/prefix.js';
 import Link from 'next/link'
 
@@ -8,9 +9,6 @@ import ZoneHeader from '../../../UIcomponents/zoneHeader'
 import PisosSel from '../../../UIcomponents/pisoSel'
 import GroupSel from '../../../UIcomponents/groupSel'
 import ItemList from '../../../UIcomponents/SrcItemList'
-import { Modal, useModal } from '../../../UIcomponents/modal'
-
-import HallFame from './hallFame'
 
 import { 
 	statePiso, 
@@ -70,11 +68,21 @@ const SRCBtn = styled.div`
 `
 
 const Lobby = () => {
-	const [isOpen, openModal, closeModal] = useModal(false)
-	const [piso, setPiso] = useState(1)
-	const [group, setGroup] = useState("dos")
+  const [mState, setMainState] = useMainState()
+	const group = mState.group ? mState.group : 'dos'
+	const piso = mState.piso ? mState.piso : 1
 	const [data, setData] = useState({})
 	const pisoA = statePiso()
+
+	const openModal = (type) => {
+    setMainState({
+      ...mState,
+      modal: {
+        visibility: true,
+        type: type
+      }
+    })
+	}
 
 	useEffect(() => {
 		setData(getLobbyData(group, piso))
@@ -90,7 +98,7 @@ const Lobby = () => {
 					</div>
 					Conoce tus Mentores
 				</SRCBtn></Link>
-				<SRCBtn onClick={openModal}>
+				<SRCBtn onClick={()=>openModal('Salon de la Fama')}>
 					<div>
 						<img src={`${prefix}/imgs/zones/hall.png`}/>
 					</div>
@@ -98,21 +106,12 @@ const Lobby = () => {
 				</SRCBtn>
 			</SRCCnt>
 		</HeaderCont>
-		<GroupSel group={group} setGroup={setGroup}/>
-		<PisosSel piso={piso} pisoF={setPiso}/>
+		<GroupSel/>
+		<PisosSel/>
 		<TitleCont>Recursos de Piso</TitleCont>
 			{piso <= pisoA
 				?	<ItemList data={data}/>
 				: null }
-
-		<Modal 
-			isOpen={isOpen}
-			closeM={closeModal}
-			title="Salon de la fama"
-		>
-			<HallFame group={group} setGroup={setGroup}/>
-		</Modal>
-
 	</QV>
 }
 

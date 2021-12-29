@@ -1,4 +1,5 @@
 import { prefix } from '../../../utils/prefix.js';
+import { useMainState } from '../../../libs/stateHooks'
 import { useState } from 'react'
 import Link from 'next/link'
 
@@ -75,13 +76,14 @@ const Img = styled.img`
 
 
 const Webi = () => {
-	const [group, setGroup] = useState("dos")
+  const [mState, setMainState] = useMainState()
+	const group = mState.group ? mState.group : 'dos'
 	const data = getWebinarData()
 	const titleA = data.titles[0]
 	const titleB = data.titles[1]
 	return <QV pg="Zonas Comunes">
 		<ZoneHeader	zone={1}/>
-		<GroupSel group={group} setGroup={setGroup}/>
+		<GroupSel/>
 		<Header>
 			<Text>
 				<Title>{titleA[0]}</Title>

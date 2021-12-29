@@ -2,8 +2,11 @@ import styled from 'styled-components'
 import Link from 'next/link'
 import { prefix } from '../../utils/prefix.js';
 
+import { useMainState } from '../../libs/stateHooks'
+
 import NotiWidget from '../notiWidget'
 import Calendar from '../calendar/index'
+import GroupSel from '../groupSel'
 
 const Container = styled.div`
 	grid-area: rb;
@@ -75,7 +78,18 @@ const CloseImg = styled.img`
 	}
 `
 
-const RightBar = ({openNoti, active, close}) => {
+const RightBar = ({active, close}) => {
+  const [mState, setMainState] = useMainState()
+
+	const openModal = (type) => {
+    setMainState({
+      ...mState,
+      modal: {
+        visibility: true,
+        type: type
+      }
+    })
+	}
 	return (
 		<Container active={active}>
 			<Header>
@@ -84,8 +98,11 @@ const RightBar = ({openNoti, active, close}) => {
 						src={`${prefix}/imgs/exit.png`}
 					/>
 			</Header>
+			<div style={{fontSize: '.9em'}}>
+			<GroupSel/>
+			</div>
 			<Calendar/>
-			<NotiWidget open={openNoti}/>
+			<NotiWidget open={()=>openModal('Noticiero')}/>
 			<a href="https://drive.google.com/file/d/1xRTV1yWZlF3viIvIS8vgQjLpMZy9AP51/view?usp=sharing" target="_blank" rel="noreferrer">
 				<ItemB>
 					<img src={`${prefix}/imgs/pil.png`}/>

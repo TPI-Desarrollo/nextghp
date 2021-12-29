@@ -10,7 +10,7 @@ import Faqs from './faqs';
 
 const types = [
 	{
-		title: 'CONTENIDO ETESC',
+		title: 'CONTENIDO',
 		link: '/zones/src/asesor',
 		type: 'src'
 	},
