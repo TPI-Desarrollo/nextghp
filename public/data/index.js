@@ -44,6 +44,9 @@ export const getNoti = () => noti
 
 // INFO
 export const getInfo = () => info
+// CONOCE QV
+export const getInfoKnow = () => info.conoce
 
 // OFFICE
 export const getOffice = () => office
+

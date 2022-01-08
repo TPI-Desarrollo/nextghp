@@ -294,7 +294,7 @@ const Principal = () => {
 			<Link href='zones/webinar'>
 				<Box>
 					<Flex>
-						<Image src={`${prefix}/imgs/principal/asesores.png`}/>
+						<Image src={`${prefix}/imgs/principal/webinars.png`}/>
 						Webinars
 					</Flex>
 					<TextBox>Descubre temas innovadores para aplicar en tu proyecto, y aprende mucho mas</TextBox>
@@ -303,7 +303,7 @@ const Principal = () => {
 		</GridB>
 
 		<Link href='info/conoceQV'>
-			<Button>Mas Informacion</Button>
+			<Button>Conoce mas de Quanticon Valley</Button>
 		</Link>
 
 		<TitleBox>
