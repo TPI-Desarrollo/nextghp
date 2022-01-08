@@ -4,7 +4,7 @@ import { useMainState } from '../../libs/stateHooks'
 import styled from 'styled-components'
 import Link from 'next/link'
 import { prefix } from '../../utils/prefix.js';
-import { getDataProg } from '../../public/data'
+import { statePisoA, getDataProg } from '../../public/data'
 
 import QV from '../../UIcomponents/qv';
 import Pdf from '../../UIcomponents/pdf';
@@ -19,9 +19,11 @@ const Image = styled.img`
 	margin-right: 1em;
 `
 const Button = styled.button`
+	width: 150px;
 	color: #172BEF;
 	font-weight: bold;
 	padding: .5em 1em;
+	margin: 1em auto;
 	border: 2px solid #172BEF;
 	border-radius: .5em;
 	transition: .3s ease;
@@ -164,14 +166,20 @@ const TitleBox = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 2em 4em 0 0;
+	margin: 1em 4em 0 0;
 `
 const TextBox = styled.div`
 	color: black;
 	font-weight: normal;
+	text-align: center;
+`
+const Flex = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1em;
 `
 const Box = styled.div`
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 60px;
@@ -192,9 +200,10 @@ const Box = styled.div`
 	}
 `
 
-const Login = () => {
+const Principal = () => {
   const [mState, setMainState] = useMainState()
 	const prog = getDataProg()
+	const pisoAct = statePisoA()
 	const noti = getNoti() 
 	const video = noti[0] 
 		? noti[0] : null
@@ -224,12 +233,12 @@ const Login = () => {
 		<Link href='etesc'>
 			<Entrega>
 				<div>
-					Piso 4
-					<p>Fase de diseño + Innovación</p>
+					Piso {pisoAct}
+					<p>{prog?.title}</p>
 				</div>
 				<EntDiv/>
 				<div>
-					Problema / Diseño y Prototipo
+					{prog?.entrega}
 				</div>
 			</Entrega>
 		</Link>
@@ -247,48 +256,55 @@ const Login = () => {
 				<Image src={`${prefix}/imgs/principal/hallfame.png`}/>
 				Salon de la Fama
 			</HallFame>
-			<Box onClick={()=>openModal('Ultimas actualizaciones')}>
+			<Box 
+				style={{display: 'flex'}}
+				onClick={()=>openModal('Ultimas actualizaciones')}
+			>
 				<Image src={`${prefix}/imgs/principal/updates.png`}/>
-				Las ultimas actualizaciones
+				<div>
+					<TextBox style={{textAlign: 'left'}}>Conoce las</TextBox>
+					Ultimas Actualizaciones
+				</div>
 			</Box>
 		</Grid>
 
 
 		<TitleBox>
 			<Title>_Conoce Quanticon Valley</Title>
-			<Link href='info/conoceOV'>
-				<Button>Mas Informacion</Button>
-			</Link>
 		</TitleBox>
 		<GridB>
 			<Link href='zones/lobby'>
 				<Box>
-					<Image src={`${prefix}/imgs/principal/lobby.png`}/>
-					<div>
+					<Flex>
+						<Image src={`${prefix}/imgs/principal/lobby.png`}/>
 						Lobby
-						<TextBox>Guia</TextBox>
-					</div>
+					</Flex>
+					<TextBox>Descubre las principales guias para desarrollar tu proyecto</TextBox>
 				</Box>
 			</Link>
 			<Link href='zones/src/asesor'>
 				<Box>
-					<Image src={`${prefix}/imgs/principal/asesores.png`}/>
-					<div>
+					<Flex>
+						<Image src={`${prefix}/imgs/principal/asesores.png`}/>
 						Asesores
-						<TextBox>Guia</TextBox>
-					</div>
+					</Flex>
+					<TextBox>Tienes dudas sobre tus tareas, como hacerlas, o algo mas especifico? Ven a descubrir!</TextBox>
 				</Box>
 			</Link>
 			<Link href='zones/webinar'>
 				<Box>
-					<Image src={`${prefix}/imgs/principal/asesores.png`}/>
-					<div>
+					<Flex>
+						<Image src={`${prefix}/imgs/principal/asesores.png`}/>
 						Webinars
-						<TextBox>Guia</TextBox>
-					</div>
+					</Flex>
+					<TextBox>Descubre temas innovadores para aplicar en tu proyecto, y aprende mucho mas</TextBox>
 				</Box>
 			</Link>
 		</GridB>
+
+		<Link href='info/conoceQV'>
+			<Button>Mas Informacion</Button>
+		</Link>
 
 		<TitleBox>
 			<Title>Avance del Juego</Title>
@@ -304,4 +320,4 @@ const Login = () => {
 		</ContProg>
 	</QV>
 }
-export default Login
+export default Principal

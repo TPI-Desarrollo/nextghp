@@ -6,7 +6,8 @@
 		"num": "55%",
 		"piso": "4to Piso",
 		"title": "Fase de Diseño + Innovación",
-		"desc": "Plantea un diseño y en marcha la creatividad"
+		"desc": "Plantea un diseño y en marcha la creatividad",
+		"entrega": "Problema / Diseño y Prototipo"
 	},
 	"modal": {
 		"visibility": false,

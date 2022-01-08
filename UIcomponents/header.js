@@ -36,9 +36,9 @@ const Desc = styled.h4`
 `
 const Img = styled.img`
 	position: absolute;
-	width: ${props => props.primary ? '28%':'38%'};
-	bottom: ${props => props.primary ? '-15%':'0'};
-	right: ${props => props.primary ? '10%':'0'};
+	width: 38%;
+	bottom: 0;
+	right: 0;
 	z-index: 1;
 	border-radius: 20px;
 	@media screen and (max-width: 1000px) {
