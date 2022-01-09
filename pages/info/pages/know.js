@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { prefix } from '../../../utils/prefix.js';
+
+import Link from 'next/link'
 import styled from 'styled-components';
 
 import { getInfoKnow } from '../../../public/data'
@@ -56,6 +58,8 @@ const SubTitle = styled.h4`
 `
 const Text = styled.p`
 	margin: 0 0 1em .5em;
+	max-width: 500px;
+	text-align: justify;
 	font-size: ${p=>p.act?'.9em':'0'};
 	height: ${p=>p.act?'auto':'0'};
 	color: #4F4F4F;
@@ -63,6 +67,22 @@ const Text = styled.p`
 `
 const Image = styled.img`
 	margin-right: 1em;
+`
+const Button = styled.button`
+	width: 150px;
+	color: #172BEF;
+	font-weight: bold;
+	padding: .5em 1em;
+	margin: 1em auto;
+	border: 2px solid #172BEF;
+	border-radius: .5em;
+	transition: .3s ease;
+	:hover{
+		transform: scale(1.05);
+		background: #172BEF;
+		cursor: pointer;
+		color: white;
+	}
 `
 
 const Know = () => {
@@ -97,6 +117,10 @@ const Know = () => {
 		<SubTitle onClick={()=>setItem(2)}
 		>3. Lo mas relevante</SubTitle>
 		<Text act={item===2}>{sel.imp}</Text>
+
+		<Link href={`/${sel.link}`}>
+			<Button>Visita esta sección </Button>
+		</Link>
 
 	</Cont>
 }

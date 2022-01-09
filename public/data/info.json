@@ -9,30 +9,34 @@
 		{
 			"title": "ETESC",
 			"img": "imgs/principal/etesc.png",
-			"obj": "Objetivo",
-			"cont": "Aqui encontraras",
-			"imp": "Lo mas relevate"
+			"obj": "En esta seccion los estudiantes podran realizar los entregables mas importantes en el desarrollo de su proyecto. Funcionara como una guia del paso a paso para que la idea valla madurando.",
+			"cont": "Encontraran los entregables mas importantes del proyecto, junto con retos que complementaran y apoyaran a que el proyecto avance y se desarrolle de la mejor manera posible.",
+			"imp": "Entregables y retos de piso",
+			"link": "etesc"
 		},
 		{
 			"title": "Lobby",
 			"img": "imgs/principal/lobby.png",
-			"obj": "Objetivo",
-			"cont": "Aqui encontraras",
-			"imp": "Lo mas relevate"
+			"obj": "Los estudiates podran acceder a las principales guias y puntos de referencia, para saber como desarrollar las tareas en cada uno de los pisos del juego.",
+			"cont": "Protocolos, guias, rubricas, ejemplos de los entregables y tareas por desarrollar.",
+			"imp": "En las rubricas encontraras una guia precisa de los requisitos que deben cumplir los entregables del proyecto, para asegurar una buena calidad.",
+			"link": "zones/lobby"
 		},
 		{
 			"title": "Asesores",
 			"img": "imgs/principal/asesores.png",
-			"obj": "Objetivo",
-			"cont": "Aqui encontraras",
-			"imp": "Lo mas relevate"
+			"obj": "En este espacio muchas de las dudas de los estudiantes pueden ser respondidas, sobre sus tareas y diferentes actividades, un centro donde encontraran conocimiento de valor.",
+			"cont": "Conocimientos especificos sobre como desarrollar un problema, como hacer un pitch, conocimientos en prototipado, mercadeo, laboratorios.",
+			"imp": "En esta seccion tambien tendran la oportunidad de conocer mentores que pueden apoyar en el desarrollo de los proyectos, como asesores y encontrar la forma de contactarlos.",
+			"link": "zones/src/asesor"
 		},
 		{
 			"title": "Webinars",
 			"img": "imgs/principal/webinars.png",
-			"obj": "Objetivo",
-			"cont": "Aqui encontraras",
-			"imp": "Lo mas relevate"
+			"obj": "Los estudiantes podran encontrar conocimientos extras, para apoyar tanto el desarrollo de sus proyectos como su crecimiento profesional.",
+			"cont": "Encontraras Webinars enfocados a la innovación y el emprendimiento, conocimientos muy valiosos.",
+			"imp": "Podras encontrar webinars relacionados con el piso del juego en el cual se encuentra el proyecto, Webinars pensados en apoyar el desarrollo del proyecto.",
+			"link": "zones/webinar"
 		}
 	]
 }
