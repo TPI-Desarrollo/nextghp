@@ -3,6 +3,7 @@ import { useMainState } from '../libs/stateHooks'
 import { Modal, useModal } from './modal'
 import Noti from './noticiero'
 import HallFame from './hallFame'
+import LastUp from './lastUp'
 
 const ModalQV = () => {
   const [mState, setMainState] = useMainState()
@@ -31,7 +32,7 @@ const ModalQV = () => {
         <Noti/>
       )}
       {mType === 'Ultimas actualizaciones' && (
-        <div>Ultimas actualizaciones</div>
+        <LastUp/>
       )}
     </Modal>
   )
