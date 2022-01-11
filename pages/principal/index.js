@@ -279,7 +279,7 @@ const Principal = () => {
 						<Image src={`${prefix}/imgs/principal/lobby.png`}/>
 						Lobby
 					</Flex>
-					<TextBox>Descubre las principales guias para desarrollar tu proyecto</TextBox>
+					<TextBox>Descubre las guías, instrucciones y rúbricas para desarrollar tu proyecto</TextBox>
 				</Box>
 			</Link>
 			<Link href='zones/src/asesor'>
@@ -288,7 +288,7 @@ const Principal = () => {
 						<Image src={`${prefix}/imgs/principal/asesores.png`}/>
 						Asesores
 					</Flex>
-					<TextBox>Tienes dudas sobre tus tareas, como hacerlas, o algo mas especifico? Ven a descubrir!</TextBox>
+					<TextBox>Encuentra contenido adicional para apoyar tu proyecto y contacta asesores.</TextBox>
 				</Box>
 			</Link>
 			<Link href='zones/webinar'>
@@ -297,7 +297,7 @@ const Principal = () => {
 						<Image src={`${prefix}/imgs/principal/webinars.png`}/>
 						Webinars
 					</Flex>
-					<TextBox>Descubre temas innovadores para aplicar en tu proyecto, y aprende mucho mas</TextBox>
+					<TextBox>Descubre temas innovadores para aplicar en tu proyecto, y aprende mucho más</TextBox>
 				</Box>
 			</Link>
 		</GridB>

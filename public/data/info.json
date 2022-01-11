@@ -9,33 +9,33 @@
 		{
 			"title": "ETESC",
 			"img": "imgs/principal/etesc.png",
-			"obj": "En esta seccion los estudiantes podran realizar los entregables mas importantes en el desarrollo de su proyecto. Funcionara como una guia del paso a paso para que la idea valla madurando.",
-			"cont": "Encontraran los entregables mas importantes del proyecto, junto con retos que complementaran y apoyaran a que el proyecto avance y se desarrolle de la mejor manera posible.",
-			"imp": "Entregables y retos de piso",
+			"obj": "En esta sección los estudiantes podrán realizar los entregables más importantes en el desarrollo de su proyecto. El desarrollo del juego se realiza avanzado de piso a piso, el etesc funciona como la estructura del juego avanzando por los pisos y siendo una guía del paso a paso para que la idea  del proyecto vaya madurando.",
+			"cont": "Encontrarán los entregables más importantes del proyecto, junto con retos que complementaran y apoyaran a que el proyecto avance y se desarrolle de la mejor manera posible.",
+			"imp": "Entregables y retos de piso.",
 			"link": "etesc"
 		},
 		{
 			"title": "Lobby",
 			"img": "imgs/principal/lobby.png",
-			"obj": "Los estudiates podran acceder a las principales guias y puntos de referencia, para saber como desarrollar las tareas en cada uno de los pisos del juego.",
-			"cont": "Protocolos, guias, rubricas, ejemplos de los entregables y tareas por desarrollar.",
-			"imp": "En las rubricas encontraras una guia precisa de los requisitos que deben cumplir los entregables del proyecto, para asegurar una buena calidad.",
+			"obj": "Los estudiantes podrán acceder a las principales guías, rúbricas y puntos de referencia, para saber cómo desarrollar las tareas en cada uno de los pisos del juego y cómo serán calificados los entregables.",
+			"cont": "Protocolos, guías, rúbricas, ejemplos de los entregables y tareas por desarrollar.",
+			"imp": "En las rúbricas encontrarás una guía precisa de los requisitos que deben cumplir los entregables del proyecto, para asegurar una buena calidad.",
 			"link": "zones/lobby"
 		},
 		{
 			"title": "Asesores",
 			"img": "imgs/principal/asesores.png",
-			"obj": "En este espacio muchas de las dudas de los estudiantes pueden ser respondidas, sobre sus tareas y diferentes actividades, un centro donde encontraran conocimiento de valor.",
-			"cont": "Conocimientos especificos sobre como desarrollar un problema, como hacer un pitch, conocimientos en prototipado, mercadeo, laboratorios.",
-			"imp": "En esta seccion tambien tendran la oportunidad de conocer mentores que pueden apoyar en el desarrollo de los proyectos, como asesores y encontrar la forma de contactarlos.",
+			"obj": "En este espacio muchas de las dudas de los estudiantes pueden ser respondidas y encontraran contenido adicional para apoyar sus proyectos.",
+			"cont": "Conocimientos específicos sobre cómo desarrollar un problema, cómo hacer un pitch, conocimientos en prototipado, mercadeo, laboratorios, contacto con los asesores y objetos virtuales de aprendizaje (OVAs).",
+			"imp": "En esta sección también tendrán la oportunidad de conocer asesores que pueden apoyar en el desarrollo de los proyectos, y encontrar la forma de contactarlos.",
 			"link": "zones/src/asesor"
 		},
 		{
 			"title": "Webinars",
 			"img": "imgs/principal/webinars.png",
-			"obj": "Los estudiantes podran encontrar conocimientos extras, para apoyar tanto el desarrollo de sus proyectos como su crecimiento profesional.",
+			"obj": "Los estudiantes podrán encontrar conocimientos extras, para apoyar tanto el desarrollo de sus proyectos como su crecimiento profesional.",
 			"cont": "Encontraras Webinars enfocados a la innovación y el emprendimiento, conocimientos muy valiosos.",
-			"imp": "Podras encontrar webinars relacionados con el piso del juego en el cual se encuentra el proyecto, Webinars pensados en apoyar el desarrollo del proyecto.",
+			"imp": "Podrás encontrar webinars relacionados con el piso del juego en el cual se encuentra el proyecto, Webinars pensados en apoyar el desarrollo del proyecto.",
 			"link": "zones/webinar"
 		}
 	]
