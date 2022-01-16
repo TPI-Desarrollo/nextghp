@@ -49,8 +49,25 @@
 				["PREGUNTAS CONVERSATORIO ERGONOMÍA","https://campus.virtual.unal.edu.co/mod/assign/view.php?id=760449"]
 			]
 		},
-		"5": {},
-		"6": {}
+		"5": {
+			"entrega": [
+				["PROTOTIPO FINAL, CAMPAÑA PUBLICITARIA Y ESTRATÉGIA DE MERCADEO", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=701166"],
+				["TRABAJO EN EQUIPO", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700299"]
+			],
+			"reto": [
+			]
+		},
+		"6": {
+			"entrega": [
+				["VALIDACIÓN DE LA SOLUCIÓN, PROTOTIPO TERMINADO", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700339"],
+				["PITCH FINAL", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700336"],
+				["PÁGINA WEB QUE CONTIENE EL TRABAJO DURANTE EL SEMESTRE", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700342"],
+				["ENTREGA FINAL DEL TRABAJO ESCRITO", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700332"],
+				["EVALUACIÓN DE DESEMPEÑOS II", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700346"]
+			],
+			"reto": [
+			]
+		}
 	},
 	"cuatro": {
 		"1" : {
@@ -93,7 +110,24 @@
 				["PREGUNTAS CONVERSATORIO ERGONOMÍA","https://campus.virtual.unal.edu.co/mod/assign/view.php?id=760450"]
 			]
 		},
-		"5": {},
-		"6": {}
+		"5": {
+			"entrega": [
+				["PROTOTIPO FINAL, CAMPAÑA PUBLICITARIA Y ESTRATÉGIA DE MERCADEO", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=701167"],
+				["TRABAJO EN EQUIPO", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700531"]
+			],
+			"reto": [
+			]
+		},
+		"6": {
+			"entrega": [
+				["VALIDACIÓN DE LA SOLUCIÓN, PROTOTIPO TERMINADO", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700571"],
+				["PITCH FINAL", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700568"],
+				["PÁGINA WEB QUE CONTIENE EL TRABAJO DURANTE EL SEMESTRE", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700574"],
+				["ENTREGA FINAL DEL TRABAJO ESCRITO", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700564"],
+				["EVALUACIÓN DE DESEMPEÑOS II", "https://campus.virtual.unal.edu.co/mod/assign/view.php?id=700578"]
+			],
+			"reto": [
+			]
+		}
 	}
 }
