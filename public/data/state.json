@@ -1,9 +1,9 @@
 {
-	"pisoA": 4,
+	"pisoA": 6,
 	"prog" : {
-		"num": "55%",
-		"piso": "4to Piso",
-		"title": "Fase de Diseño + Innovación",
-		"desc": "Plantea un diseño y en marcha la creatividad"
+		"num": "83%",
+		"piso": "5to Piso",
+		"title": "¡Tenemos el valor probado y garantizada la viabilidad!",
+		"desc": "Validación de la solución, prototipo terminado y pitch final"
 	}
 }
