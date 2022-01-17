@@ -54,15 +54,28 @@
 				["RÚBRICA PITCH PISO 4","https://campus.virtual.unal.edu.co/mod/resource/view.php?id=767009"]
 			]
 		},
-		"6" : {
+		"5" :{
 			"ova": [
-				["GUÍA PRE SELECCIÓN DE MEJORES", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700321"],
-				["CREACIÓN PAGINAS WIX", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700315"],
-				["GUÍA PARTICIPACIÓN DE PROFESORES", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700317"],
-				["GUÍA PARTICIPACIÓN DE ESTUDIANTE", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700318"],
+				["GUÍA PARTICIPACIÓN DE PROFESORES TPI+EXPOIDEAS", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700317"],
+				["GUÍA PARTICIPACIÓN DE ESTUDIANTE TPI+EXPOIDEAS", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700318"],
 				["GUÍA DE PRESENTACIÓN FINAL PITCH Y PROTOTIPO", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700319"]
 			],	
 			"pdf": [],
+			"video": [
+				["CREACIÓN PAGINAS WIX", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700315"]
+			],
+			"tool": []
+		},
+		"6" : {
+			"ova": [
+				["GUÍA DE TRABAJO ESCRITO", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700249"]
+			],	
+			"pdf": [
+				["RÚBRICA PITCH FINAL", "" ],
+				["RÚBRICA PÁGINA WEB", "" ],
+				["RÚBRICA PROTOTIPO FINAL", "" ],
+				["RÚBRICA TRABAJO ESCRITO FINAL", "" ]
+			],
 			"video": [],
 			"tool": []
 		}
@@ -112,15 +125,28 @@
 				["RÚBRICA PITCH PISO 4","https://campus.virtual.unal.edu.co/mod/resource/view.php?id=767009"]
 			]
 		},
+		"5" :{
+			"ova" : [
+				["GUÍA PARTICIPACIÓN DE PROFESORES TPI+EXPOIDEAS", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700549"],
+				["GUÍA PARTICIPACIÓN DE ESTUDIANTE TPI+EXPOIDEAS", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700550"],
+				["GUÍA DE PRESENTACIÓN FINAL PITCH Y PROTOTIPO", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700551"]
+			],
+			"pdf": [],
+			"video": [
+				["CREACIÓN PAGINAS WIX", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700547"]
+			],
+			"tool": []
+		},
 		"6" : {
 			"ova": [
-				["GUÍA PRE SELECCIÓN DE MEJORES", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700553"],
-				["CREACIÓN PAGINAS WIX", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700547"],
-				["GUÍA PARTICIPACIÓN DE PROFESORES", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700549"],
-				["GUÍA PARTICIPACIÓN DE ESTUDIANTE", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700550"],
-				["GUÍA DE PRESENTACIÓN FINAL PITCH Y PROTOTIPO", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700551"]
+				["GUÍA DE TRABAJO ESCRITO", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700483"]
 			],	
-			"pdf": [],
+			"pdf": [
+				["RÚBRICA PITCH FINAL", "" ],
+				["RÚBRICA PÁGINA WEB", ""],
+				["RÚBRICA PROTOTIPO FINAL", ""],
+				["RÚBRICA TRABAJO ESCRITO FINAL", ""]
+			],
 			"video": [],
 			"tool": []
 		}
