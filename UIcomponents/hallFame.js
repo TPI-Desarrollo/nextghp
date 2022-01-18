@@ -1,8 +1,8 @@
-import { prefix } from '../../../utils/prefix.js';
+import { prefix } from '../utils/prefix.js';
 import styled from 'styled-components';
-import { getHFData } from '../../../public/data'
+import { getHFData } from '../public/data'
 
-import { useMainState } from '../../../libs/stateHooks'
+import { useMainState } from '../libs/stateHooks'
 
 const Container = styled.div`
 	border-radius: 20px;

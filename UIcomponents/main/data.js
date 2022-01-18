@@ -24,7 +24,7 @@ const data = {
 		},
 		{
 			title: 'Informacion',
-			link: '/info',
+			link: '/info/about',
 			src: `${prefix}/imgs/main/Icon_Informacion.svg`,
 		},
 	]
