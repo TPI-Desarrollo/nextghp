@@ -8,8 +8,14 @@ import info from './info.json'
 import office from './office.json'
 import state from './state.json'
 
+
+export const getstate = () => state
 //statePiso
-export const statePiso = () => state.pisoA
+export const statePiso = () => state.piso
+//statePisoActual
+export const statePisoA = () => state.pisoMax
+//stateUpdates
+export const stateUpdates = () => state.lastUpdates
 
 //Progress
 export const getDataProg = () => state.prog
@@ -38,6 +44,9 @@ export const getNoti = () => noti
 
 // INFO
 export const getInfo = () => info
+// CONOCE QV
+export const getInfoKnow = () => info.conoce
 
 // OFFICE
 export const getOffice = () => office
+
