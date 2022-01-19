@@ -58,7 +58,7 @@
 			"ova": [
 				["GUÍA PARTICIPACIÓN DE PROFESORES TPI+EXPOIDEAS", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700317"],
 				["GUÍA PARTICIPACIÓN DE ESTUDIANTE TPI+EXPOIDEAS", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700318"],
-				["GUÍA DE PITCH PISO 5", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700319"]
+				["GUÍA DE PITCH PISO 5", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=769001"]
 			],	
 			"pdf": [],
 			"video": [
@@ -71,10 +71,10 @@
 				["GUÍA DE TRABAJO ESCRITO", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700249"]
 			],	
 			"pdf": [
-				["RÚBRICA PITCH FINAL", "" ],
-				["RÚBRICA PÁGINA WEB", "" ],
-				["RÚBRICA PROTOTIPO FINAL", "" ],
-				["RÚBRICA TRABAJO ESCRITO FINAL", "" ]
+				["RÚBRICA PITCH FINAL", "https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700335" ],
+				["RÚBRICA PÁGINA WEB", "https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700341" ],
+				["RÚBRICA PROTOTIPO FINAL", "https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700338" ],
+				["RÚBRICA TRABAJO ESCRITO FINAL", "https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700331" ]
 			],
 			"video": [],
 			"tool": []
@@ -129,7 +129,7 @@
 			"ova" : [
 				["GUÍA PARTICIPACIÓN DE PROFESORES TPI+EXPOIDEAS", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700549"],
 				["GUÍA PARTICIPACIÓN DE ESTUDIANTE TPI+EXPOIDEAS", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700550"],
-				["GUÍA DE PITCH PISO 5", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700551"]
+				["GUÍA DE PITCH PISO 5", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=769002"]
 			],
 			"pdf": [],
 			"video": [
@@ -142,10 +142,10 @@
 				["GUÍA DE TRABAJO ESCRITO", "https://campus.virtual.unal.edu.co/mod/hvp/view.php?id=700483"]
 			],	
 			"pdf": [
-				["RÚBRICA PITCH FINAL", "" ],
-				["RÚBRICA PÁGINA WEB", ""],
-				["RÚBRICA PROTOTIPO FINAL", ""],
-				["RÚBRICA TRABAJO ESCRITO FINAL", ""]
+				["RÚBRICA PITCH FINAL", "https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700567" ],
+				["RÚBRICA PÁGINA WEB", "https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700573"],
+				["RÚBRICA PROTOTIPO FINAL", "https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700570"],
+				["RÚBRICA TRABAJO ESCRITO FINAL", "https://campus.virtual.unal.edu.co/mod/resource/view.php?id=700563"]
 			],
 			"video": [],
 			"tool": []
