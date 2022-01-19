@@ -4,10 +4,7 @@ import NavMob from './main/navMobile'
 import RightBar from './main/rightBar'
 import MobBar from './main/MobBar'
 
-
 import { useState } from 'react'
-import { Modal, useModal } from '../UIcomponents/modal'
-import Noti from './noticiero'
 
 const Container = styled.div`
 	overflow: hidden;
@@ -55,24 +52,15 @@ const Content = styled.div`
 `
 
 const QV = ({ children, pg }) => {
-	const [isOpen, openModal, closeModal] = useModal(false)
 	const [actRight, setActRight] = useState(false)
 	const closeRight = () => {setActRight(false)}
   return (
 		<Container>
 			<Content>
 				{children}
-			<Modal 
-				isOpen={isOpen}
-				closeM={closeModal}
-				title="Noticiero"
-			>
-				<Noti/>
-			</Modal>
 			</Content>
 
 			<RightBar	
-				openNoti={openModal} 
 				active={actRight}
 				close={closeRight}
 			/>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useMainState } from '../../../../libs/stateHooks'
 import { prefix } from '../../../../utils/prefix.js';
 
 import styled from 'styled-components';
@@ -16,8 +17,9 @@ const Cont = styled.div`
 `
 
 const Srcs = ({active}) => {
-	const [piso, setPiso] = useState(1)
-	const [group, setGroup] = useState("dos")
+  const [mState, setMainState] = useMainState()
+	const group = mState.group ? mState.group : 'dos'
+	const piso = mState.piso ? mState.piso : 1
 	const [data, setData] = useState({})
 	const pisoA = statePiso()
 
@@ -26,8 +28,8 @@ const Srcs = ({active}) => {
 	}, [group, piso])
 
 	return <Cont active={active}>
-		<GroupSel group={group} setGroup={setGroup}/>
-		<PisosSel piso={piso} pisoF={setPiso}/>
+		<GroupSel/>
+		<PisosSel/>
 			{piso <= pisoA
 				?	<ItemList data={data}/>
 				: null }

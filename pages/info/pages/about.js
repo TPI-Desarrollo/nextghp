@@ -1,9 +1,9 @@
-import { prefix } from '../../utils/prefix.js';
-import { getInfo } from '../../public/data'
+import { prefix } from '../../../utils/prefix.js';
+import { getInfo } from '../../../public/data'
 
 import styled from 'styled-components'
 
-import { useEgg, Egg } from '../../UIcomponents/egg'
+import { useEgg, Egg } from '../../../UIcomponents/egg'
 
 
 const Title = styled.h3`

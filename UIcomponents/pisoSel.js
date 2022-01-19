@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { useMainState } from '../libs/stateHooks'
+import { statePisoA } from '../public/data'
 
 const Selector = styled.div`
 	display: flex;
@@ -34,13 +36,20 @@ const SelItem = styled.div`
 	}
 `
 
-const PisosSel = ({piso, pisoF}) => {
+const PisosSel = () => {
+  const [mState, setMainState] = useMainState()
+	const pisoAct = statePisoA()
+	const set = (piso) => {
+		if(!(piso > pisoAct)) {
+			setMainState({...mState, piso})
+		}
+	}
 	return (
 	<Selector>
 		{[1,2,3,4,5,6].map((item) => 
 			<SelItem 
-				onClick={() => pisoF(item)}
-				primary={piso === item}
+				onClick={() => set(item)}
+				primary={mState.piso === item}
 				key={item.toString()}
 			>
 				    Piso {item}

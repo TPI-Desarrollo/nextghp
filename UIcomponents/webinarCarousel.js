@@ -101,13 +101,18 @@ const CardCont = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 `
+const A = styled.a`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`
 
 const WebCard = ({item, grp, active}) => {
 	const group = grp ? grp : 'dos'
 	return <Cards>
 		{item.map((c,i) =>
 		<CardCont key={`crd${i}`}>
-			<Link href={c.link[group]}>
+			<A href={c.link[group]}>
 				<Card prox={c.state === 'prox'}>
 					{c.state === 'prox'
 						? <Text>
@@ -117,7 +122,7 @@ const WebCard = ({item, grp, active}) => {
 						: <WebImg src={`${prefix}/imgs/webinars/${c.n}.jpg`}/>
 					}
 				</Card>
-			</Link>
+			</A>
 			<Title>{c.name}</Title>
 			<Expo>{c.expo}</Expo>
 		</CardCont>

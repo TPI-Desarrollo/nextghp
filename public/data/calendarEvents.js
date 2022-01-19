@@ -13,11 +13,11 @@ const events = [
   {d: 1, m: 12, y: 2021, event: 'Presentación de infografía'},
   {d: 3, m: 12, y: 2021, event: 'Entrega reto de piso (Pieza gráfica asuntos de género)'},
   {d: 6, m: 12, y: 2021, event: 'Mentoria'},
-  {d:10, m: 12, y: 2021, event: 'Primera entrega trabajo escrito'},
+  {d:10, m: 12, y: 2021, event: 'Plazo para enviar preguntas conversatorio'},
   {d:13, m: 12, y: 2021, event: 'Mentoria'},
   {d:15, m: 12, y: 2021, event: 'Conversatorio (laboratorio y prototipado)'},
 
-  {d:12, m: 1, y: 2022, event: 'Mentoria formativa (entrega de piso)'},
+  {d:12, m: 1, y: 2022, event: 'Primera entrega trabajo escrito'},
 ]
 
 export default events
