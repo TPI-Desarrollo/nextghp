@@ -34,8 +34,8 @@ const Close = styled.img`
   top: 1em;
   right: 1em;
   transition: .3s ease;
-
   :hover{
+    cursor: pointer;
     transform: scale(1.2);
   }
 `
