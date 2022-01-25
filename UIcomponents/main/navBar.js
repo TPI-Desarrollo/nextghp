@@ -86,7 +86,7 @@ const NavCont = ({pg}) => {
 								<Text>{item.title}</Text>
 							</Button>
 						</Link>
-						<ReactTooltip id={"dscTooltip"+i} place='right'>
+						<ReactTooltip id={"dscTooltip"+i} place='right' type='info'>
 							{item.dsc}
 						</ReactTooltip>
 					</div>

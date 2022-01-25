@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import ReactTooltip from 'react-tooltip'
 import { prefix } from '../utils/prefix.js';
 
 import { getNoti } from '../public/data'
@@ -34,7 +35,7 @@ const NotiWidget = ({open}) => {
 		? noti[0].video : null
 	return (
 		<Container onClick={open}>
-			<Img src={`${prefix}/imgs/noti/news.png`}/>
+			<Img src={`${prefix}/imgs/noti/news.png`} data-tip data-for="dscTooltipNoti"/>
 			{video ?
 			<iframe 
 				src={`https://www.youtube.com/embed/${video}`}	
@@ -51,6 +52,10 @@ const NotiWidget = ({open}) => {
 					borderRadius: '0 0 1em 1em'
 				}}
 			/> : null }
+
+			<ReactTooltip id="dscTooltipNoti" place='left' type='info'>
+				Revisa todos los Noticieros
+			</ReactTooltip>
 		</Container>
 	);
 }
