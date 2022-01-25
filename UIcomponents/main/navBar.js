@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import ReactTooltip from 'react-tooltip'
 import { prefix } from '../../utils/prefix.js';
 import { getPages } from './data'
 
@@ -76,14 +77,19 @@ const NavCont = ({pg}) => {
 		<Container>
 			<NavImg src={navImg} alt="nav-img"/>
 			<Logo src={logo} alt="logo"/>
-			{pages.map((item) => {
+			{pages.map((item, i) => {
 				return(
-					<Link href={item.link} key={item.link}>
-						<Button active={item.title === pg}>
-							<Icon src={item.src} alt={item.link}/>
-							<Text>{item.title}</Text>
-						</Button>
-					</Link>
+					<div>
+						<Link href={item.link} key={item.link}>
+							<Button active={item.title === pg} data-tip data-for={"dscTooltip"+i.toString()}>
+								<Icon src={item.src} alt={item.link}/>
+								<Text>{item.title}</Text>
+							</Button>
+						</Link>
+						<ReactTooltip id={"dscTooltip"+i} place='right'>
+							{item.dsc}
+						</ReactTooltip>
+					</div>
 				)
 			})}
 		</Container>
