@@ -79,7 +79,7 @@ const NavCont = ({pg}) => {
 			<Logo src={logo} alt="logo"/>
 			{pages.map((item, i) => {
 				return(
-					<div>
+					<span>
 						<Link href={item.link} key={item.link}>
 							<Button active={item.title === pg} data-tip data-for={"dscTooltip"+i.toString()}>
 								<Icon src={item.src} alt={item.link}/>
@@ -89,7 +89,7 @@ const NavCont = ({pg}) => {
 						<ReactTooltip id={"dscTooltip"+i} place='right' type='info'>
 							{item.dsc}
 						</ReactTooltip>
-					</div>
+					</span>
 				)
 			})}
 		</Container>

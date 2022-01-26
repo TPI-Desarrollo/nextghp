@@ -307,7 +307,7 @@ const Principal = () => {
 		</Link>
 
 		<TitleBox>
-			<Title>Avance del Juego</Title>
+			<Title>_Avance del Juego</Title>
 		</TitleBox>
 		<ContProg>
 			<BarProg>
