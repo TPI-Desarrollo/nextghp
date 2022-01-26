@@ -59,7 +59,7 @@ const Container = styled.nav`
 	margin: 12px 0px 12px 8px; 
 	border-radius:20px; 
 	top: 12px;
-	height: 92vh; 
+	height: 96vh; 
 	color: #bbb;
 	box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.4);
 

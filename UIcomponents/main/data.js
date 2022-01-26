@@ -15,6 +15,12 @@ const data = {
 			dsc: 'Entregables y Retos para cada Semana',
 		},
 		{
+			title: 'Contenido',
+			link: '/content',
+			src: `${prefix}/imgs/main/Icon_cont.svg`,
+			dsc: 'Contenidos que apoyaran el desarrollo de tu proyecto',
+		},
+		{
 			title: 'Zonas Comunes',
 			link: '/zones',
 			src: `${prefix}/imgs/main/Icon_zonas_comunes.svg`,
