@@ -39,7 +39,7 @@ const Content = () => {
     return <QV pg="Contenido">
         <Header
 			title="Contenido"
-			desc="Iformacion para desarrollar tu proyecto"
+			desc="Información para desarrollar tu proyecto"
 			imgH={imgPrin}
 		/>
         <Margin>

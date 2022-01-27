@@ -10,14 +10,14 @@ import Faqs from './faqs';
 
 const types = [
 	{
-		title: 'CONTENIDO',
-		link: '/zones/src/asesor',
-		type: 'src'
-	},
-	{
 		title: 'ASESORES VIRTUALES',
 		link: '/zones/vir/asesor',
 		type: 'vir'
+	},
+	{
+		title: 'CONTENIDO',
+		link: '/zones/src/asesor',
+		type: 'src'
 	},
 	{
 		title: 'PREGUNTAS FRECUENTES',
