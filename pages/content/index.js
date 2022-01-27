@@ -43,6 +43,9 @@ const Content = () => {
 			imgH={imgPrin}
 		/>
         <Margin>
+            <p>
+				Accede a Recursos y Objetos Virtuales de Aprendizaje (OVAs) que se actualizan en cada piso, estos contienen valiosa informacion para ampliar y complementar tu proyecto.
+			</p>
             <GroupSel /> 
             <PisosSel/>
             <TitleCont>Contenidos de Piso</TitleCont>
