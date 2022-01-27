@@ -12,7 +12,7 @@ import ItemList from '../../../UIcomponents/SrcItemList'
 
 import { 
 	statePiso, 
-	getLobbyData 
+	getLobbyData
 } from '../../../public/data'
 import TitleCont from '../../common/TitleCont';
 
@@ -59,7 +59,7 @@ const SRCBtn = styled.div`
 `
 
 const Lobby = () => {
-  const [mState, setMainState] = useMainState()
+  	const [mState, setMainState] = useMainState()
 	const group = mState.group ? mState.group : 'dos'
 	const piso = mState.piso ? mState.piso : 1
 	const [data, setData] = useState({})
