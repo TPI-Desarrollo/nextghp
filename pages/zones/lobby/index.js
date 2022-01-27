@@ -14,17 +14,8 @@ import {
 	statePiso, 
 	getLobbyData 
 } from '../../../public/data'
+import TitleCont from '../../common/TitleCont';
 
-
-const TitleCont = styled.h2`
-	font-weight: 600;
-	font-size: 1.5em;
-	line-height: 52px;
-	letter-spacing: -0.03em;
-	color: #272835;
-	margin: 0px;
-	z-index: 2;
-`
 const HeaderCont = styled.div`
 	display: flex;
 	flex-wrap: wrap;
