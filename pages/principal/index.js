@@ -137,6 +137,7 @@ const EntDiv = styled.div`
 const Noti = styled.img`
 	grid-row: span 2;
 	border-radius: 1em;
+	width: 100%;
 	transition: .3s ease;
 	:hover {
 		transform: scale(1.03);
