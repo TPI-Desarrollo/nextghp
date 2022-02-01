@@ -11,7 +11,8 @@ const Container = styled.div`
 	grid-gap: 0 2em;
 	padding: 0 1em;
 	width: 100%;
-
+	height: 100vh;
+	overflow-y:hidden;
 	@media screen and (max-width: 800px) {
 		display: flex;
 		flex-direction: column;
@@ -23,7 +24,7 @@ const Title = styled.h2`
 	color: #22c;
 `
 const List = styled.div`
-	height: 45%;
+	height: 95%;
 	overflow-y: scroll;
 
 	::-webkit-scrollbar-track {
@@ -40,8 +41,8 @@ const List = styled.div`
 		border: 1px solid rgba(0,0,0,0);
 	}
 
-	@media screen and (max-width: 600px) {
-		max-height: 20%;
+	@media screen and (max-width: 800px) {
+		max-height: 15%;
 		margin-bottom: .2em;
 	}
 `
@@ -51,7 +52,7 @@ const HeaderList = styled.img`
 `
 const Iframe = styled.iframe`
 	width: 100%;
-	height: 50%;
+	height: 95%;
 	border-radius: 1em; 
 	grid-row: span 2;
 

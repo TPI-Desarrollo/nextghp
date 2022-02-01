@@ -7,6 +7,7 @@ import { getPages } from './data'
 const Logo = styled.img`
 	margin: 10% 0 10% 10%;
 	max-width:50%;
+	cursor: pointer;
 `
 const NavImg = styled.img`
 	position: absolute;
@@ -76,11 +77,13 @@ const NavCont = ({pg}) => {
 	return (
 		<Container>
 			<NavImg src={navImg} alt="nav-img"/>
-			<Logo src={logo} alt="logo"/>
+			<Link href={"/principal"}>
+				<Logo src={logo} alt="logo"/>
+			</Link>
 			{pages.map((item, i) => {
 				return(
-					<span>
-						<Link href={item.link} key={item.link}>
+					<span key={item.link}>
+						<Link href={item.link} >
 							<Button active={item.title === pg} data-tip data-for={"dscTooltip"+i.toString()}>
 								<Icon src={item.src} alt={item.link}/>
 								<Text>{item.title}</Text>
