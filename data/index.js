@@ -27,6 +27,9 @@ export const getPisoTitle = (piso) => etesc["pisos"][piso]
 // ZONES
 export const getZones = () => zones
 
+// CONTENT
+export const getLobbyDataByGroup = (grp) => lobbydata[grp]
+
 // LOBBY
 export const getLobbyData = (grp, piso) => lobbydata[grp][piso]
 export const getHFData = () => lobbydata.hallFame
