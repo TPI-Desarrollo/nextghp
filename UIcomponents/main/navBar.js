@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import ReactTooltip from 'react-tooltip'
 import { prefix } from '../../utils/prefix.js';
 import { getPages } from './data'
 
 const Logo = styled.img`
 	margin: 10% 0 10% 10%;
 	max-width:50%;
+	cursor: pointer;
 `
 const NavImg = styled.img`
 	position: absolute;
@@ -58,7 +60,7 @@ const Container = styled.nav`
 	margin: 12px 0px 12px 8px; 
 	border-radius:20px; 
 	top: 12px;
-	height: 92vh; 
+	height: 96vh; 
 	color: #bbb;
 	box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.4);
 
@@ -75,15 +77,22 @@ const NavCont = ({pg}) => {
 	return (
 		<Container>
 			<NavImg src={navImg} alt="nav-img"/>
-			<Logo src={logo} alt="logo"/>
-			{pages.map((item) => {
+			<Link href={"/principal"}>
+				<Logo src={logo} alt="logo"/>
+			</Link>
+			{pages.map((item, i) => {
 				return(
-					<Link href={item.link} key={item.link}>
-						<Button active={item.title === pg}>
-							<Icon src={item.src} alt={item.link}/>
-							<Text>{item.title}</Text>
-						</Button>
-					</Link>
+					<span key={item.link}>
+						<Link href={item.link} >
+							<Button active={item.title === pg} data-tip data-for={"dscTooltip"+i.toString()}>
+								<Icon src={item.src} alt={item.link}/>
+								<Text>{item.title}</Text>
+							</Button>
+						</Link>
+						<ReactTooltip id={"dscTooltip"+i} place='right' type='info'>
+							{item.dsc}
+						</ReactTooltip>
+					</span>
 				)
 			})}
 		</Container>

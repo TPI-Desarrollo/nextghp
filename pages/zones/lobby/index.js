@@ -12,19 +12,10 @@ import ItemList from '../../../UIcomponents/SrcItemList'
 
 import { 
 	statePiso, 
-	getLobbyData 
+	getLobbyData
 } from '../../../public/data'
+import TitleCont from '../../common/TitleCont';
 
-
-const TitleCont = styled.h2`
-	font-weight: 600;
-	font-size: 1.5em;
-	line-height: 52px;
-	letter-spacing: -0.03em;
-	color: #272835;
-	margin: 0px;
-	z-index: 2;
-`
 const HeaderCont = styled.div`
 	display: flex;
 	flex-wrap: wrap;
@@ -68,7 +59,7 @@ const SRCBtn = styled.div`
 `
 
 const Lobby = () => {
-  const [mState, setMainState] = useMainState()
+  	const [mState, setMainState] = useMainState()
 	const group = mState.group ? mState.group : 'dos'
 	const piso = mState.piso ? mState.piso : 1
 	const [data, setData] = useState({})

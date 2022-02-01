@@ -22,6 +22,9 @@ const Title = styled.h2`
 	margin: 0;
 	z-index: 2;
 `
+const Margin = styled.div`
+	margin: 0 20px;
+`
 
 const Etesc = () => {
   const [mState, setMainState] = useMainState()
@@ -35,10 +38,17 @@ const Etesc = () => {
 			desc="Edificio Tecnológico de Empredimiento Sostenible"
 			imgH={imgEtesc}
 		/>
-		<GroupSel/>
-		<PisosSel/>
-		<Title>{pisoTitle}</Title>
-		<ListItems group={group} piso={piso} data={data}/>
+		<Margin>
+			<p>
+				En esta sección podras realizar los entregables más importantes en el desarrollo de tu proyecto los cuales te permitiran avanzar al proximo piso. 
+				Con estos y otros retos podras ganar Innocoins y Puntos de Victoria .
+			</p>	
+			<GroupSel/>
+			<PisosSel/>
+			<Title>{pisoTitle}</Title>
+			<ListItems group={group} piso={piso} data={data}/>	
+		</Margin>
+		
 	</QV>
 }
 

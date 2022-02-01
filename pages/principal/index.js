@@ -274,11 +274,11 @@ const Principal = () => {
 			<Title>_Conoce Quanticon Valley</Title>
 		</TitleBox>
 		<GridB>
-			<Link href='zones/lobby'>
+			<Link href='content'>
 				<Box>
 					<Flex>
 						<Image src={`${prefix}/imgs/principal/lobby.png`}/>
-						Lobby
+						Contenido
 					</Flex>
 					<TextBox>Descubre las guías, instrucciones y rúbricas para desarrollar tu proyecto</TextBox>
 				</Box>
@@ -308,7 +308,7 @@ const Principal = () => {
 		</Link>
 
 		<TitleBox>
-			<Title>Avance del Juego</Title>
+			<Title>_Avance del Juego</Title>
 		</TitleBox>
 		<ContProg>
 			<BarProg>

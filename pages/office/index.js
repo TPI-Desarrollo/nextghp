@@ -17,6 +17,9 @@ const Grid = styled.div`
 	grid-gap: 3em;
 	margin: 10px 8%;
 `
+const Margin = styled.div`
+	margin: 0 20px;
+`
 
 const Office = () => {
 	const data = getOffice()
@@ -27,6 +30,11 @@ const Office = () => {
 			desc="Perfil y progreso de los equipos"
 			imgH={imgOffice}
 		/>
+		<Margin>
+			<p>
+				En los siguientes enlaces podras encontrar informacion sobre el avance que lleva cada uno de los equipos en los diferentes horarios de la asignatura.
+			</p>
+		</Margin>
 		<Grid>
 			{data.map(item => 
 				<Element 

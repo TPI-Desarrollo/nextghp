@@ -74,6 +74,10 @@ const Img = styled.img`
 	}
 `
 
+const Margin = styled.div`
+	margin: 0 20px;
+`
+
 
 const Webi = () => {
   const [mState, setMainState] = useMainState()
@@ -82,31 +86,38 @@ const Webi = () => {
 	const titleA = data.titles[0]
 	const titleB = data.titles[1]
 	return <QV pg="Zonas Comunes">
+		
 		<ZoneHeader	zone={1}/>
-		<GroupSel/>
-		<Header>
-			<Text>
-				<Title>{titleA[0]}</Title>
-				<Desc>{titleA[1]}<R>{titleA[2]}</R></Desc>
-			</Text>
-			<Inscrip>
-				Inscribite Aquí
-			</Inscrip>
-		</Header>
-		<Carousel data={data['2021s2']} grp={group}/>
-		<Header>
-			<Text>
-				<Title>{titleB[0]}</Title>
-				<Desc>{titleB[1]}<R>{titleB[2]}</R></Desc>
-			</Text>
-		</Header>
-		<Carousel data={data['2021s1']} grp={group}/>
-		<Header>
-			<Desc>Mira los <R>Webinars</R> de versiones anteriores</Desc>
-		</Header>
-		<Link href="https://www.youtube.com/watch?v=rBoyRR4KGaE&list=PLvLMsmXmVy6LHh1oouUSUtIebNmtJdleH&ab_channel=Facultaddeingenier%C3%ADa-UniversidadNacionaldeColombia">
-			<Img src={`${prefix}/imgs/webinars/antes.png`}/>
-		</Link>
+		<Margin>
+			<p>
+				Encuentra informacion sobre Webinars a los que podras asistir o revisa los que ya sucedieron.
+			</p>
+			<GroupSel/>
+			<Header>
+				<Text>
+					<Title>{titleA[0]}</Title>
+					<Desc>{titleA[1]}<R>{titleA[2]}</R></Desc>
+				</Text>
+				<Inscrip>
+					Inscribite Aquí
+				</Inscrip>
+			</Header>
+			<Carousel data={data['2021s2']} grp={group}/>
+			<Header>
+				<Text>
+					<Title>{titleB[0]}</Title>
+					<Desc>{titleB[1]}<R>{titleB[2]}</R></Desc>
+				</Text>
+			</Header>
+			<Carousel data={data['2021s1']} grp={group}/>
+			<Header>
+				<Desc>Mira los <R>Webinars</R> de versiones anteriores</Desc>
+			</Header>
+			<Link href="https://www.youtube.com/watch?v=rBoyRR4KGaE&list=PLvLMsmXmVy6LHh1oouUSUtIebNmtJdleH&ab_channel=Facultaddeingenier%C3%ADa-UniversidadNacionaldeColombia">
+				<Img src={`${prefix}/imgs/webinars/antes.png`}/>
+			</Link>
+		</Margin>
+		
 	</QV>
 }
 

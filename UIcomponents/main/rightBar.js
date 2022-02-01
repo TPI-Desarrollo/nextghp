@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 import { prefix } from '../../utils/prefix.js';
+import ReactTooltip from 'react-tooltip'
 
 import { useMainState } from '../../libs/stateHooks'
 
@@ -104,11 +105,15 @@ const RightBar = ({active, close}) => {
 			<Calendar/>
 			<NotiWidget open={()=>openModal('Noticiero')}/>
 			<a href="https://drive.google.com/file/d/1xRTV1yWZlF3viIvIS8vgQjLpMZy9AP51/view?usp=sharing" target="_blank" rel="noreferrer">
-				<ItemB>
+				<ItemB data-tip data-for="dscTooltipPils">
 					<img src={`${prefix}/imgs/pil.png`}/>
 					Pildoras de la semana
 				</ItemB>
 			</a>
+
+			<ReactTooltip id="dscTooltipPils" place='left' type='info'>
+				Informacion para la Semana
+			</ReactTooltip>
 		</Container>
 	);
 }

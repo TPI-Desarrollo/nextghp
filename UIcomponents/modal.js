@@ -20,7 +20,7 @@ const Content = styled.div`
 	position: relative;
 	display: flex;
 	flex-direction: column;
-  background-color: rgba(227, 227, 227, 0.8);;
+  background-color: rgba(227, 227, 227, .9);;
 	border-radius: 20px;
 	height: 90%;
 	width: 90%;
@@ -45,6 +45,7 @@ const Title = styled.h2`
 `
 const CloseImg = styled.img`
 	height: 100%;
+	cursor: pointer;
 	transition: .3 ease;
 	:hover {
 		transform: scale(1.05);
